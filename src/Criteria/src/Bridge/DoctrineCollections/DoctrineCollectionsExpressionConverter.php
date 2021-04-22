@@ -19,10 +19,7 @@ use Webmozart\Expression\Expression;
  */
 final class DoctrineCollectionsExpressionConverter extends ExpressionVisitor
 {
-    /**
-     * @var string
-     */
-    private $comparisonMethod;
+    private string $comparisonMethod;
 
     /**
      * DoctrineCollectionsExpressionConverter constructor.

@@ -32,10 +32,10 @@ interface DateTimeValueInterface extends DateTimeInterface, JsonSerializable
     /**
      * @var int average month in seconds
      */
-    public const MONTH = 2629800;
+    public const MONTH = 2_629_800;
 
     /**
      * @var int average year in seconds
      */
-    public const YEAR = 31557600;
+    public const YEAR = 31_557_600;
 }

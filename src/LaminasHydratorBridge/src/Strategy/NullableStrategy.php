@@ -14,12 +14,9 @@ use Laminas\Hydrator\Strategy\StrategyInterface;
  *
  * @final
  */
-class NullableStrategy implements StrategyInterface
+final class NullableStrategy implements StrategyInterface
 {
-    /**
-     * @var StrategyInterface
-     */
-    private $strategy;
+    private StrategyInterface $strategy;
 
     /**
      * @var callable

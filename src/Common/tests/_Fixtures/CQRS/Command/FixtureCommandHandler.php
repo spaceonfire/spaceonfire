@@ -9,7 +9,7 @@ use SplObjectStorage;
 
 final class FixtureCommandHandler
 {
-    private $handledCommands;
+    private \SplObjectStorage $handledCommands;
 
     public function __construct()
     {

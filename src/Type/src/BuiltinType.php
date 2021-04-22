@@ -49,15 +49,9 @@ final class BuiltinType implements TypeInterface
         self::BOOL => self::BOOL,
     ];
 
-    /**
-     * @var string
-     */
-    private $type;
+    private string $type;
 
-    /**
-     * @var bool
-     */
-    private $strict;
+    private bool $strict;
 
     /**
      * BuiltinType constructor.

@@ -31,10 +31,7 @@ use stdClass;
  */
 final class TypedCollection extends AbstractCollectionDecorator
 {
-    /**
-     * @var TypeInterface
-     */
-    protected $type;
+    private TypeInterface $type;
 
     /**
      * TypedCollection constructor.
@@ -98,9 +95,7 @@ final class TypedCollection extends AbstractCollectionDecorator
     {
         return $this->downgrade()
             ->groupBy($groupField, $preserveKeys)
-            ->map(function (CollectionInterface $group) {
-                return $this->newStatic($group->all());
-            });
+            ->map(fn (CollectionInterface $group) => $this->newStatic($group->all()));
     }
 
     /**
@@ -120,21 +115,21 @@ final class TypedCollection extends AbstractCollectionDecorator
         return $this->newStatic(parent::replace($item, $replacement, $strict)->all());
     }
 
+    /** {@inheritDoc} */
+    protected function newStatic($items): CollectionInterface
+    {
+        return new self($items, $this->type);
+    }
+
     /**
      * Check that item are the same type as collection requires
      * @param mixed $item
      * @return void
      */
-    protected function checkType($item): void
+    private function checkType($item): void
     {
         if (!$this->type->check($item)) {
-            throw new LogicException(static::class . ' accept only instances of ' . $this->type);
+            throw new LogicException(sprintf('Collection accepts only elements of type: "%s"', $this->type));
         }
-    }
-
-    /** {@inheritDoc} */
-    protected function newStatic($items): CollectionInterface
-    {
-        return new self($items, $this->type);
     }
 }

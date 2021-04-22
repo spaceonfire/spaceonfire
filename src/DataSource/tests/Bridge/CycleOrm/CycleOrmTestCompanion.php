@@ -30,24 +30,18 @@ use Webmozart\Assert\Assert;
 
 class CycleOrmTestCompanion
 {
-    /** @var DatabaseManager */
-    private $dbal;
+    private ?\Spiral\Database\DatabaseManager $dbal = null;
 
-    /** @var ORM\ORM */
-    private $orm;
+    private ?\Cycle\ORM\ORM $orm = null;
 
     /** @var string[] */
-    private $repositories;
+    private ?array $repositories = null;
 
     /** @var RepositoryInterface[] */
-    private $repositoriesCache;
+    private ?array $repositoriesCache = null;
 
-    /** @var bool */
-    private $initialized = false;
-    /**
-     * @var TestLogger
-     */
-    private $logger;
+    private bool $initialized = false;
+    private ?\spaceonfire\DataSource\Bridge\CycleOrm\Fixtures\TestLogger $logger = null;
 
     public function __construct()
     {

@@ -18,30 +18,15 @@ use Spiral\Database\Query\SelectQuery;
 
 class CycleQuery implements QueryInterface
 {
-    /**
-     * @var Select
-     */
-    protected $select;
+    protected Select $select;
 
-    /**
-     * @var MapperInterface
-     */
-    protected $mapper;
+    protected MapperInterface $mapper;
 
-    /**
-     * @var CriteriaInterface|null
-     */
-    protected $criteria;
+    protected ?CriteriaInterface $criteria = null;
 
-    /**
-     * @var int|null
-     */
-    protected $limit;
+    protected ?int $limit = null;
 
-    /**
-     * @var int|null
-     */
-    protected $offset;
+    protected ?int $offset = null;
 
     /**
      * CycleQuery constructor.

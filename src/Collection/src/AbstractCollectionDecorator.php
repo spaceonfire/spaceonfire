@@ -17,10 +17,7 @@ abstract class AbstractCollectionDecorator implements CollectionInterface
 {
     use CollectionAliasesTrait;
 
-    /**
-     * @var CollectionInterface
-     */
-    protected $collection;
+    protected CollectionInterface $collection;
 
     /**
      * AbstractCollectionDecorator constructor.
@@ -399,7 +396,7 @@ abstract class AbstractCollectionDecorator implements CollectionInterface
 
     /**
      * @inheritDoc
-     * @return mixed
+     * @return iterable<mixed>
      */
     public function jsonSerialize()
     {

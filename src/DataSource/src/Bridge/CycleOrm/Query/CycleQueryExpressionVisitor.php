@@ -13,7 +13,7 @@ use Webmozart\Expression\Constraint;
 use Webmozart\Expression\Expression;
 use Webmozart\Expression\Logic;
 
-class CycleQueryExpressionVisitor extends AbstractExpressionVisitor
+final class CycleQueryExpressionVisitor extends AbstractExpressionVisitor
 {
     /**
      * Generates Cycle's Query Builder scope for conjunction expression
@@ -99,9 +99,7 @@ class CycleQueryExpressionVisitor extends AbstractExpressionVisitor
 
             case $expression instanceof Constraint\In:
                 return function (QueryBuilder $queryBuilder) use ($field, $expression, $isNegated) {
-                    $val = array_map(function ($v) use ($field) {
-                        return $this->visitValue($field, $v);
-                    }, $expression->getAcceptedValues());
+                    $val = array_map(fn ($v) => $this->visitValue($field, $v), $expression->getAcceptedValues());
 
                     $operator = ($isNegated ? 'not ' : '') . 'in';
 

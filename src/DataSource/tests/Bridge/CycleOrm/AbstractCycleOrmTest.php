@@ -22,10 +22,7 @@ use Spiral\Database\Driver\DriverInterface;
  */
 abstract class AbstractCycleOrmTest extends TestCase
 {
-    /**
-     * @var CycleOrmTestCompanion
-     */
-    private static $companion;
+    private static ?\spaceonfire\DataSource\Bridge\CycleOrm\CycleOrmTestCompanion $companion = null;
 
     protected function setUp(): void
     {

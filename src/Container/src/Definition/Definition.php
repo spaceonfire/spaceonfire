@@ -11,38 +11,32 @@ use spaceonfire\Container\RawValueHolder;
 
 final class Definition implements DefinitionInterface
 {
-    /**
-     * @var string
-     */
-    private $abstract;
+    private string $abstract;
 
     /**
      * @var mixed
      */
     private $concrete;
 
-    /**
-     * @var bool
-     */
-    private $shared;
+    private bool $shared;
 
     /**
      * @var Argument[]
      */
-    private $arguments = [];
+    private array $arguments = [];
 
     /**
      * @var array[]
      */
-    private $methods = [];
+    private array $methods = [];
 
     /**
      * @var array<string,string>
      */
-    private $tags = [];
+    private array $tags = [];
 
     /**
-     * @var object|null
+     * @var mixed|null
      */
     private $resolved;
 
@@ -54,7 +48,7 @@ final class Definition implements DefinitionInterface
      */
     public function __construct(string $abstract, $concrete = null, bool $shared = false)
     {
-        $concrete = $concrete ?? $abstract;
+        $concrete ??= $abstract;
 
         if (is_object($concrete) && !is_callable($concrete)) {
             $shared = true;
@@ -135,7 +129,7 @@ final class Definition implements DefinitionInterface
      */
     public function resolve(ContainerInterface $container)
     {
-        if (null !== $this->resolved && $this->isShared()) {
+        if (null !== $this->resolved && $this->shared) {
             return $this->resolved;
         }
 

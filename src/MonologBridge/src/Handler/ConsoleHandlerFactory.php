@@ -13,10 +13,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 final class ConsoleHandlerFactory extends AbstractPsrHandlerFactory
 {
-    /**
-     * @var OutputInterface|null
-     */
-    private $output;
+    private ?OutputInterface $output;
 
     /**
      * ConsoleHandlerFactory constructor.

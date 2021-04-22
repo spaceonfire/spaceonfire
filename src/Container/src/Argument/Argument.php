@@ -11,20 +11,14 @@ use spaceonfire\Container\RawValueHolder;
 
 final class Argument
 {
-    /**
-     * @var string
-     */
-    private $name;
+    private string $name;
 
     /**
      * @var string|null Argument class FQN or null for scalars or arrays
      */
-    private $className;
+    private ?string $className;
 
-    /**
-     * @var RawValueHolder |null
-     */
-    private $defaultValue;
+    private ?RawValueHolder $defaultValue;
 
     /**
      * Argument constructor.

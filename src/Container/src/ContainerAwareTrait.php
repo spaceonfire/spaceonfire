@@ -9,7 +9,7 @@ trait ContainerAwareTrait
     /**
      * @var ContainerInterface|null
      */
-    protected $container;
+    protected ?ContainerInterface $container = null;
 
     /**
      * @inheritDoc

@@ -15,12 +15,12 @@ class UriValueTest extends TestCase
         $val = new UriValue('http://localhost');
         self::assertInstanceOf(UriInterface::class, $val->value());
         self::assertSame('http://localhost', (string)$val);
-        self::assertSame('"http:\/\/localhost"', json_encode($val));
+        self::assertSame('"http:\/\/localhost"', json_encode($val, JSON_THROW_ON_ERROR));
 
         $val = new UriValue(new Uri('http://localhost'));
         self::assertInstanceOf(UriInterface::class, $val->value());
         self::assertSame('http://localhost', (string)$val);
-        self::assertSame('"http:\/\/localhost"', json_encode($val));
+        self::assertSame('"http:\/\/localhost"', json_encode($val, JSON_THROW_ON_ERROR));
     }
 
     public function testConstructorException(): void

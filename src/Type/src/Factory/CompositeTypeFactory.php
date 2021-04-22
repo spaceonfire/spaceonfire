@@ -14,7 +14,7 @@ final class CompositeTypeFactory implements TypeFactoryInterface
     /**
      * @var TypeFactoryInterface[]
      */
-    private $factories;
+    private array $factories;
 
     /**
      * CompositeTypeFactory constructor.

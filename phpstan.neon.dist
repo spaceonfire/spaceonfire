@@ -26,7 +26,6 @@ parameters:
         - '/^Property spaceonfire\\CommandBus\\Mapping\\ClassName\\ReplacementClassNameMapping::\$replace \(array\<string\>\|string\) does not accept array\<string\>\|string\|null.$/'
         - '/^Method spaceonfire\\CommandBus\\CommandBus::createCommandHandler\(\) should return callable\(\): mixed but returns array\(object, string\).$/'
         - '/expects callable(.*) array(.*) given\.$/'
-        - '/^Method (.*) should return static\((.*)\) but returns (.*)\.$/'
         - '/^Call to an undefined method Cycle\\ORM\\RepositoryInterface::select\(\)\.$/'
         -
             message: '/^Cannot call method make\(\) on spaceonfire\\Type\\Factory\\TypeFactoryInterface\|null.$/'

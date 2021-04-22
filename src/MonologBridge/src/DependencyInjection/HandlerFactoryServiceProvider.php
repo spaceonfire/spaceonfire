@@ -13,10 +13,7 @@ final class HandlerFactoryServiceProvider extends AbstractServiceProvider
 {
     public const DEFINITION_TAG = 'monolog.handler.factory';
 
-    /**
-     * @var bool
-     */
-    private $shareDefinitions;
+    private bool $shareDefinitions;
 
     /**
      * HandlerFactoryServiceProvider constructor.

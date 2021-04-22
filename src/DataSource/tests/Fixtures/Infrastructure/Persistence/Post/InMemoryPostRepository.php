@@ -19,11 +19,8 @@ class InMemoryPostRepository implements PostRepositoryInterface
     /**
      * @var Post[]
      */
-    private $storage;
-    /**
-     * @var MapperInterface
-     */
-    private $mapper;
+    private array $storage;
+    private \spaceonfire\DataSource\MapperInterface $mapper;
 
     /**
      * InMemoryPostRepository constructor.

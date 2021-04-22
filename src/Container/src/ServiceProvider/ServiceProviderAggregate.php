@@ -18,12 +18,12 @@ final class ServiceProviderAggregate extends AbstractCollectionDecorator impleme
     /**
      * @var array<string,array<string>> maps service name to provider id which provides it
      */
-    private $providesMap = [];
+    private array $providesMap = [];
 
     /**
      * @var array<string,bool>
      */
-    private $registered = [];
+    private array $registered = [];
 
     /**
      * ServiceProviderAggregate constructor.

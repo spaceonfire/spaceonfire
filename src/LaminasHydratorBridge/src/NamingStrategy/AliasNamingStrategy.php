@@ -11,7 +11,7 @@ final class AliasNamingStrategy implements NamingStrategyInterface
     /**
      * @var array<string,string>
      */
-    private $aliasesMap = [];
+    private array $aliasesMap = [];
 
     /**
      * AliasNamingStrategy constructor.

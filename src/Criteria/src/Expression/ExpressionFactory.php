@@ -72,7 +72,7 @@ use Webmozart\Expression\Selector\Method;
  * @method KeyExists keyExists(string $keyName)
  * @method KeyNotExists keyNotExists(string $keyName)
  */
-class ExpressionFactory
+final class ExpressionFactory
 {
     /**
      * @param string $name
@@ -116,7 +116,7 @@ class ExpressionFactory
             return $expr;
         }
 
-        throw new BadMethodCallException('Call to an undefined method ' . static::class . '::' . $name . '()');
+        throw new BadMethodCallException('Call to an undefined method ' . self::class . '::' . $name . '()');
     }
 
     /**

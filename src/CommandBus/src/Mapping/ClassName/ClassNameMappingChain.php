@@ -6,12 +6,12 @@ namespace spaceonfire\CommandBus\Mapping\ClassName;
 
 use Webmozart\Assert\Assert;
 
-class ClassNameMappingChain implements ClassNameMappingInterface
+final class ClassNameMappingChain implements ClassNameMappingInterface
 {
     /**
      * @var ClassNameMappingInterface[]
      */
-    private $mappings;
+    private array $mappings;
 
     /**
      * ClassNameMappingChain constructor.

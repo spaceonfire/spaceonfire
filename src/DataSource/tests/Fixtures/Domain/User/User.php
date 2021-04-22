@@ -13,14 +13,8 @@ use spaceonfire\DataSource\AbstractEntity;
  */
 class User extends AbstractEntity
 {
-    /**
-     * @var string|null
-     */
-    private $id;
-    /**
-     * @var string|null
-     */
-    private $name;
+    private ?string $id = null;
+    private ?string $name = null;
 
     /**
      * User constructor.

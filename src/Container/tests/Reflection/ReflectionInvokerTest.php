@@ -13,10 +13,7 @@ use spaceonfire\Container\Fixtures\MyClass;
 
 class ReflectionInvokerTest extends AbstractTestCase
 {
-    /**
-     * @var ReflectionInvoker
-     */
-    private $invoker;
+    private ?\spaceonfire\Container\Reflection\ReflectionInvoker $invoker = null;
 
     protected function setUp(): void
     {

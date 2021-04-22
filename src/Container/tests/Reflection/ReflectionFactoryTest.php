@@ -13,10 +13,7 @@ use spaceonfire\Container\Fixtures\B;
 
 class ReflectionFactoryTest extends AbstractTestCase
 {
-    /**
-     * @var ReflectionFactory
-     */
-    private $factory;
+    private ?\spaceonfire\Container\Reflection\ReflectionFactory $factory = null;
 
     protected function setUp(): void
     {

@@ -8,7 +8,6 @@ use BadMethodCallException;
 use spaceonfire\Collection\Collection;
 use spaceonfire\Collection\CollectionInterface;
 use spaceonfire\Container\Argument\ArgumentResolver;
-use spaceonfire\Container\Argument\ResolverInterface;
 use spaceonfire\Container\Definition\DefinitionInterface;
 use spaceonfire\Container\Reflection\ReflectionFactory;
 use spaceonfire\Container\Reflection\ReflectionInvoker;
@@ -17,20 +16,11 @@ final class ReflectionContainer implements ContainerInterface, ContainerAwareInt
 {
     use ContainerAwareTrait;
 
-    /**
-     * @var ResolverInterface
-     */
-    private $argumentResolver;
+    private ArgumentResolver $argumentResolver;
 
-    /**
-     * @var ReflectionFactory
-     */
-    private $objectFactory;
+    private ReflectionFactory $objectFactory;
 
-    /**
-     * @var ReflectionInvoker
-     */
-    private $callableInvoker;
+    private ReflectionInvoker $callableInvoker;
 
     /**
      * ReflectionContainer constructor.

@@ -9,12 +9,12 @@ trait MayBeProfiledMessageTrait
     /**
      * @var string|null
      */
-    protected $profilingEventName;
+    protected ?string $profilingEventName = null;
 
     /**
      * @var string|null
      */
-    protected $profilingCategory;
+    protected ?string $profilingCategory = null;
 
     /**
      * Returns event name for profiling

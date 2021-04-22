@@ -9,15 +9,9 @@ use spaceonfire\CommandBus\Mapping\Method\MethodNameMappingInterface;
 
 final class CompositeMapping implements CommandToHandlerMappingInterface
 {
-    /**
-     * @var ClassNameMappingInterface
-     */
-    private $classNameMapping;
+    private ClassNameMappingInterface $classNameMapping;
 
-    /**
-     * @var MethodNameMappingInterface
-     */
-    private $methodNameMapping;
+    private MethodNameMappingInterface $methodNameMapping;
 
     /**
      * CompositeMapping constructor.

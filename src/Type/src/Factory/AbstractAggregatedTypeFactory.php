@@ -8,10 +8,7 @@ abstract class AbstractAggregatedTypeFactory implements TypeFactoryInterface
 {
     use TypeFactoryTrait;
 
-    /**
-     * @var string
-     */
-    protected $delimiter;
+    protected string $delimiter;
 
     public function __construct(string $delimiter)
     {

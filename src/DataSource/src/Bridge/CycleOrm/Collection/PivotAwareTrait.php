@@ -10,9 +10,9 @@ use SplObjectStorage;
 trait PivotAwareTrait
 {
     /**
-     * @var SplObjectStorage
+     * @var SplObjectStorage|null
      */
-    protected $pivotContext;
+    protected ?SplObjectStorage $pivotContext = null;
 
     /**
      * Get associated pivot data.
@@ -32,9 +32,8 @@ trait PivotAwareTrait
      * Set associated pivot data.
      *
      * @param SplObjectStorage $pivotContext
-     * @return mixed|void
      */
-    public function setPivotContext(SplObjectStorage $pivotContext)
+    public function setPivotContext(SplObjectStorage $pivotContext): void
     {
         $this->pivotContext = $pivotContext;
     }

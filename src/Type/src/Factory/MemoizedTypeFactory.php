@@ -8,20 +8,17 @@ use spaceonfire\Type\TypeInterface;
 
 final class MemoizedTypeFactory implements TypeFactoryInterface
 {
-    /**
-     * @var TypeFactoryInterface
-     */
-    private $underlyingFactory;
+    private TypeFactoryInterface $underlyingFactory;
 
     /**
      * @var array<string,bool>
      */
-    private $cacheSupports = [];
+    private array $cacheSupports = [];
 
     /**
      * @var array<string,TypeInterface>
      */
-    private $cacheMake = [];
+    private array $cacheMake = [];
 
     /**
      * MemoizedTypeFactory constructor.

@@ -9,17 +9,17 @@ trait MayBeLoggedMessageTrait
     /**
      * @var string|null
      */
-    private $beforeMessage;
+    private ?string $beforeMessage = null;
 
     /**
      * @var string|null
      */
-    private $afterMessage;
+    private ?string $afterMessage = null;
 
     /**
      * @var string|null
      */
-    private $errorMessage;
+    private ?string $errorMessage = null;
 
     /**
      * Renders log message that be logged before message handling

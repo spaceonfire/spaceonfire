@@ -18,14 +18,10 @@ class NullableStrategyTest extends AbstractTestCase
         $strategyMock = $this->prophesize(StrategyInterface::class);
         $strategyMock->hydrate(Argument::any(), Argument::any())
             ->shouldBeCalledTimes(1)
-            ->will(function ($args) {
-                return $args[0];
-            });
+            ->will(fn ($args) => $args[0]);
         $strategyMock->extract(Argument::any(), Argument::any())
             ->shouldBeCalledTimes(1)
-            ->will(function ($args) {
-                return $args[0];
-            });
+            ->will(fn ($args) => $args[0]);
 
         /** @noinspection PhpIncompatibleReturnTypeInspection */
         return $strategyMock->reveal();
@@ -44,9 +40,7 @@ class NullableStrategyTest extends AbstractTestCase
     public function testCustomNullValuePredicate(): void
     {
         $nullValues = [0, '', null];
-        $strategy = new NullableStrategy($this->mockStrategy(), static function ($value) use ($nullValues): bool {
-            return in_array($value, $nullValues, true);
-        });
+        $strategy = new NullableStrategy($this->mockStrategy(), static fn ($value): bool => in_array($value, $nullValues, true));
 
         self::assertSame('foo', $strategy->extract('foo'));
 

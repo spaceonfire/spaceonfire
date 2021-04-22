@@ -4,24 +4,13 @@ declare(strict_types=1);
 
 namespace spaceonfire\Type;
 
-use Ramsey\Uuid\Type\TypeInterface;
-
 final class CollectionType implements TypeInterface
 {
-    /**
-     * @var TypeInterface
-     */
-    private $valueType;
+    private TypeInterface $valueType;
 
-    /**
-     * @var TypeInterface|null
-     */
-    private $keyType;
+    private ?TypeInterface $keyType;
 
-    /**
-     * @var TypeInterface
-     */
-    private $iterableType;
+    private TypeInterface $iterableType;
 
     /**
      * CollectionType constructor.

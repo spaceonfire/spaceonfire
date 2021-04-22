@@ -12,10 +12,7 @@ final class BuiltinTypeFactory implements TypeFactoryInterface
 {
     use TypeFactoryTrait;
 
-    /**
-     * @var bool
-     */
-    private $strictByDefault;
+    private bool $strictByDefault;
 
     /**
      * BuiltinTypeFactory constructor.

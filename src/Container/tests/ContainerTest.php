@@ -150,9 +150,7 @@ class ContainerTest extends AbstractTestCase
 
         $container->addServiceProvider(MyClassProvider::class);
 
-        $container->add('foo', function () {
-            return 'foo';
-        })->addTag('tag');
+        $container->add('foo', fn () => 'foo')->addTag('tag');
 
         $resolved = $container->getTagged('tag');
 

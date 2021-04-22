@@ -12,25 +12,13 @@ use Symfony\Component\Stopwatch\Stopwatch;
 
 final class ProfilerMiddleware implements MiddlewareInterface, LoggerAwareInterface
 {
-    /**
-     * @var Stopwatch
-     */
-    private $stopwatch;
+    private Stopwatch $stopwatch;
 
-    /**
-     * @var ProfilerMiddlewareMessagePredicateInterface
-     */
-    private $predicate;
+    private ProfilerMiddlewareMessagePredicateInterface $predicate;
 
-    /**
-     * @var LoggerInterface|null
-     */
-    private $logger;
+    private ?LoggerInterface $logger;
 
-    /**
-     * @var string
-     */
-    private $logLevel;
+    private string $logLevel;
 
     /**
      * ProfilerMiddleware constructor.
@@ -88,9 +76,7 @@ final class ProfilerMiddleware implements MiddlewareInterface, LoggerAwareInterf
         }
 
         return new ClosureProfilerMiddlewareMessagePredicate(
-            static function (object $message): bool {
-                return true;
-            }
+            static fn (object $message): bool => true
         );
     }
 

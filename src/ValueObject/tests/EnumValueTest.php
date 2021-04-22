@@ -34,7 +34,7 @@ class EnumValueTest extends TestCase
         $val = $this->factory(1);
         self::assertSame(1, $val->value());
         self::assertSame('1', (string)$val);
-        self::assertSame('"1"', json_encode($val));
+        self::assertSame('"1"', json_encode($val, JSON_THROW_ON_ERROR));
     }
 
     public function testConstructorException(): void

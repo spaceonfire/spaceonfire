@@ -17,10 +17,7 @@ use Webmozart\Assert\Assert;
 
 final class MailerHandlerFactory extends AbstractHandlerFactory
 {
-    /**
-     * @var MailerInterface|null
-     */
-    private $mailer;
+    private ?MailerInterface $mailer;
 
     /**
      * MailerHandlerFactory constructor.

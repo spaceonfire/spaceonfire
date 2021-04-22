@@ -18,14 +18,8 @@ use Webmozart\Expression\Selector\Key;
 
 class CycleQueryExpressionVisitorTest extends AbstractCycleOrmTest
 {
-    /**
-     * @var CycleQueryExpressionVisitor
-     */
-    private $visitor;
-    /**
-     * @var QueryBuilder
-     */
-    private $queryBuilder;
+    private ?\spaceonfire\DataSource\Bridge\CycleOrm\Query\CycleQueryExpressionVisitor $visitor = null;
+    private ?\Cycle\ORM\Select\QueryBuilder $queryBuilder = null;
 
     protected function setUp(): void
     {

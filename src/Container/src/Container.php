@@ -7,7 +7,6 @@ namespace spaceonfire\Container;
 use InvalidArgumentException;
 use spaceonfire\Collection\CollectionInterface;
 use spaceonfire\Container\Argument\ArgumentResolver;
-use spaceonfire\Container\Argument\ResolverInterface;
 use spaceonfire\Container\Definition\DefinitionAggregate;
 use spaceonfire\Container\Definition\DefinitionAggregateInterface;
 use spaceonfire\Container\Definition\DefinitionInterface;
@@ -23,30 +22,15 @@ final class Container implements ContainerWithServiceProvidersInterface, Contain
 {
     use ContainerAwareTrait;
 
-    /**
-     * @var DefinitionAggregateInterface
-     */
-    private $definitions;
+    private DefinitionAggregateInterface $definitions;
 
-    /**
-     * @var ServiceProviderAggregateInterface
-     */
-    private $providers;
+    private ServiceProviderAggregateInterface $providers;
 
-    /**
-     * @var ResolverInterface
-     */
-    private $argumentResolver;
+    private ArgumentResolver $argumentResolver;
 
-    /**
-     * @var ReflectionFactory
-     */
-    private $objectFactory;
+    private ReflectionFactory $objectFactory;
 
-    /**
-     * @var ReflectionInvoker
-     */
-    private $callableInvoker;
+    private ReflectionInvoker $callableInvoker;
 
     /**
      * Container constructor.

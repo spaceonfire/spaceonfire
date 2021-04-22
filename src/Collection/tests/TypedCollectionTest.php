@@ -141,9 +141,7 @@ class TypedCollectionTest extends TestCase
     public function testMap()
     {
         $collection = new TypedCollection([1, 2, 3], 'integer');
-        $multiplied = $collection->map(static function ($item) {
-            return $item * $item;
-        });
+        $multiplied = $collection->map(static fn ($item) => $item * $item);
         $this->assertNotEquals(TypedCollection::class, get_class($multiplied));
         $this->assertEquals([1, 4, 9], $multiplied->all());
     }

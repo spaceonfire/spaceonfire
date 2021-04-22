@@ -29,9 +29,7 @@ class ArrayHelperTest extends TestCase
             ['admin.firstname', 'John', 'test'],
             ['admin.lastname', 'Doe'],
             [
-                static function ($array, $defaultValue) {
-                    return $array['date'] . $defaultValue;
-                },
+                static fn ($array, $defaultValue) => $array['date'] . $defaultValue,
                 '31-12-2113test',
                 'test',
             ],
@@ -642,13 +640,9 @@ class ArrayHelperTest extends TestCase
         $result = ArrayHelper::getColumn($array, 'id', false);
         self::assertEquals(['123', '345'], $result);
 
-        $result = ArrayHelper::getColumn($array, static function ($element) {
-            return $element['data'];
-        });
+        $result = ArrayHelper::getColumn($array, static fn ($element) => $element['data']);
         self::assertEquals(['a' => 'abc', 'b' => 'def'], $result);
-        $result = ArrayHelper::getColumn($array, static function ($element) {
-            return $element['data'];
-        }, false);
+        $result = ArrayHelper::getColumn($array, static fn ($element) => $element['data'], false);
         self::assertEquals(['abc', 'def'], $result);
     }
 

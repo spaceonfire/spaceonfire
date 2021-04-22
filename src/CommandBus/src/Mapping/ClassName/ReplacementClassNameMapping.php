@@ -6,7 +6,7 @@ namespace spaceonfire\CommandBus\Mapping\ClassName;
 
 use Webmozart\Assert\Assert;
 
-class ReplacementClassNameMapping implements ClassNameMappingInterface
+final class ReplacementClassNameMapping implements ClassNameMappingInterface
 {
     /**
      * @var string|string[]

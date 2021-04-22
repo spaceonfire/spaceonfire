@@ -12,7 +12,7 @@ class DomainException extends \DomainException
     /**
      * @var array<string,string|mixed>
      */
-    private $parameters;
+    private array $parameters;
 
     /**
      * DomainException constructor.
@@ -28,7 +28,7 @@ class DomainException extends \DomainException
         ?Throwable $previous = null
     ) {
         $this->parameters = $this->prepareParameters($parameters);
-        $message = $message ?? $this->getDefaultMessage($this->parameters);
+        $message ??= $this->getDefaultMessage($this->parameters);
 
         parent::__construct($message, $code, $previous);
     }
@@ -51,9 +51,7 @@ class DomainException extends \DomainException
     {
         $message = $prepareMessage ? $prepareMessage($this) : $this->getMessage();
 
-        $parameters = array_map(static function ($value) {
-            return (string)$value;
-        }, $this->parameters);
+        $parameters = array_map(static fn ($value) => (string)$value, $this->parameters);
 
         return str_replace(array_keys($this->parameters), $parameters, $message);
     }
@@ -73,9 +71,7 @@ class DomainException extends \DomainException
     {
         Assert::allRegex(array_keys($parameters), '/[A-Za-z0-9_\-]+/i');
 
-        $keys = array_map(static function ($key) {
-            return '{' . $key . '}';
-        }, array_keys($parameters));
+        $keys = array_map(static fn ($key) => '{' . $key . '}', array_keys($parameters));
 
         return array_combine($keys, $parameters) ?: [];
     }

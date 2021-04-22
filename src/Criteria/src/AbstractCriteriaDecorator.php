@@ -9,10 +9,7 @@ use Webmozart\Expression\Expression;
 
 abstract class AbstractCriteriaDecorator implements CriteriaInterface
 {
-    /**
-     * @var CriteriaInterface
-     */
-    protected $criteria;
+    protected CriteriaInterface $criteria;
 
     /**
      * CriteriaAdapter constructor.

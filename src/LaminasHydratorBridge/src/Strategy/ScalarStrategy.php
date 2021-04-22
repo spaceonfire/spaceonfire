@@ -10,15 +10,9 @@ use spaceonfire\Type\BuiltinType;
 
 final class ScalarStrategy implements StrategyInterface
 {
-    /**
-     * @var BuiltinType
-     */
-    private $hydrateType;
+    private BuiltinType $hydrateType;
 
-    /**
-     * @var BuiltinType
-     */
-    private $extractType;
+    private BuiltinType $extractType;
 
     /**
      * ScalarStrategy constructor.

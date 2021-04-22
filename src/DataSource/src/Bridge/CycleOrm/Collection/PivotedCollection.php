@@ -14,7 +14,7 @@ use spaceonfire\Collection\AbstractCollectionDecorator;
  *
  * @final
  */
-class PivotedCollection extends AbstractCollectionDecorator implements PivotAwareInterface
+final class PivotedCollection extends AbstractCollectionDecorator implements PivotAwareInterface
 {
     use PivotAwareTrait;
 }

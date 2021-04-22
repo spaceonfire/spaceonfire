@@ -8,7 +8,7 @@ use ArrayAccess;
 use InvalidArgumentException;
 use Webmozart\Assert\Assert;
 
-class ArrayHelper
+abstract class ArrayHelper
 {
     /**
      * Check that array is associative (have at least one string key)
@@ -73,7 +73,6 @@ class ArrayHelper
         foreach ($array as $key => $value) {
             /** @var string[] $keysChain */
             $keysChain = explode($separator, (string)$key);
-            /** @var array $subArray */
             $subArray = &$result;
             while (1 < count($keysChain)) {
                 /** @var string $subKey */
@@ -174,7 +173,7 @@ class ArrayHelper
      * @param mixed $value the value to be written
      * @return void
      */
-    public static function setValue(&$array, $path, $value)
+    public static function setValue(array &$array, $path, $value)
     {
         if (null === $path) {
             $array = $value;
@@ -238,7 +237,7 @@ class ArrayHelper
      * @param string|callable $group
      * @return array
      */
-    public static function map($array, $from, $to, $group = null)
+    public static function map(array $array, $from, $to, $group = null): array
     {
         $result = [];
         foreach ($array as $element) {
@@ -408,7 +407,7 @@ class ArrayHelper
      * @param bool $keepKeys
      * @return array
      */
-    public static function getColumn($array, $name, $keepKeys = true): array
+    public static function getColumn(array $array, $name, $keepKeys = true): array
     {
         $result = [];
         if ($keepKeys) {

@@ -13,9 +13,21 @@ final class CollectionTypeFactory implements TypeFactoryInterface
     use TypeFactoryTrait;
 
     /**
-     * @var TypeFactoryInterface
+     * @var string
      */
-    private $iterableTypeFactory;
+    private const ITERABLE = 'iterable';
+
+    /**
+     * @var string
+     */
+    private const VALUE = 'value';
+
+    /**
+     * @var string
+     */
+    private const KEY = 'key';
+
+    private TypeFactoryInterface $iterableTypeFactory;
 
     /**
      * CollectionTypeFactory constructor.
@@ -26,9 +38,11 @@ final class CollectionTypeFactory implements TypeFactoryInterface
         if (null === $iterableTypeFactory) {
             $iterableTypeFactory = new CompositeTypeFactory(...[
                 new InstanceOfTypeFactory(),
-                new PartialSupportTypeFactory(new BuiltinTypeFactory(), function (string $type): bool {
-                    return in_array($type, ['array', 'iterable'], true);
-                }),
+                new PartialSupportTypeFactory(new BuiltinTypeFactory(), fn (string $type): bool => in_array(
+                    $type,
+                    ['array', self::ITERABLE],
+                    true
+                )),
             ]);
         }
 
@@ -52,22 +66,22 @@ final class CollectionTypeFactory implements TypeFactoryInterface
             return false;
         }
 
-        if (!isset($typeParts['value'])) {
+        if (!isset($typeParts[self::VALUE])) {
             return false;
         }
 
-        if (!$this->parent->supports($typeParts['value'])) {
+        if (!$this->parent->supports($typeParts[self::VALUE])) {
             return false;
         }
 
         if (
-            isset($typeParts['iterable']) &&
-            !$this->iterableTypeFactory->supports($typeParts['iterable'])
+            isset($typeParts[self::ITERABLE]) &&
+            !$this->iterableTypeFactory->supports($typeParts[self::ITERABLE])
         ) {
             return false;
         }
 
-        if (isset($typeParts['key']) && !$this->parent->supports($typeParts['key'])) {
+        if (isset($typeParts[self::KEY]) && !$this->parent->supports($typeParts[self::KEY])) {
             return false;
         }
 
@@ -86,11 +100,15 @@ final class CollectionTypeFactory implements TypeFactoryInterface
         /** @var array $parsed */
         $parsed = $this->parseType($type);
 
-        $parsed['value'] = $this->parent->make($parsed['value']);
-        $parsed['key'] = $parsed['key'] ? $this->parent->make($parsed['key']) : null;
-        $parsed['iterable'] = $parsed['iterable'] ? $this->iterableTypeFactory->make($parsed['iterable']) : null;
+        $parsed[self::VALUE] = $this->parent->make($parsed[self::VALUE]);
+        $parsed[self::KEY] = $parsed[self::KEY]
+            ? $this->parent->make($parsed[self::KEY])
+            : null;
+        $parsed[self::ITERABLE] = $parsed[self::ITERABLE]
+            ? $this->iterableTypeFactory->make($parsed[self::ITERABLE])
+            : null;
 
-        return new CollectionType($parsed['value'], $parsed['key'], $parsed['iterable']);
+        return new CollectionType($parsed[self::VALUE], $parsed[self::KEY], $parsed[self::ITERABLE]);
     }
 
     /**
@@ -102,13 +120,13 @@ final class CollectionTypeFactory implements TypeFactoryInterface
         $type = $this->removeWhitespaces($type);
 
         $result = [
-            'iterable' => null,
-            'key' => null,
-            'value' => null,
+            self::ITERABLE => null,
+            self::KEY => null,
+            self::VALUE => null,
         ];
 
         if (strpos($type, '[]') === strlen($type) - 2) {
-            $result['value'] = substr($type, 0, -2) ?: null;
+            $result[self::VALUE] = substr($type, 0, -2) ?: null;
             return $result;
         }
 
@@ -116,7 +134,7 @@ final class CollectionTypeFactory implements TypeFactoryInterface
             (0 < $openPos = strpos($type, '<')) &&
             (strpos($type, '>') === strlen($type) - 1)
         ) {
-            $result['iterable'] = substr($type, 0, $openPos);
+            $result[self::ITERABLE] = substr($type, 0, $openPos);
             [$key, $value] = explode(',', substr($type, $openPos + 1, -1)) + [null, null];
 
             if (!$value && !$key) {
@@ -128,8 +146,8 @@ final class CollectionTypeFactory implements TypeFactoryInterface
                 $key = null;
             }
 
-            $result['key'] = $key ?: null;
-            $result['value'] = $value ?: null;
+            $result[self::KEY] = $key ?: null;
+            $result[self::VALUE] = $value ?: null;
 
             return $result;
         }

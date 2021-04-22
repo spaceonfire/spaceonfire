@@ -5,36 +5,25 @@ declare(strict_types=1);
 namespace spaceonfire\CommandBus\Bridge\PsrLog;
 
 use InvalidArgumentException;
-use Psr\Log\LoggerAwareInterface;
-use Psr\Log\LoggerAwareTrait;
 use Psr\Log\LoggerInterface;
 use Psr\Log\LogLevel;
 use spaceonfire\CommandBus\MiddlewareInterface;
 use Throwable;
 
-final class LoggerMiddleware implements MiddlewareInterface, LoggerAwareInterface
+final class LoggerMiddleware implements MiddlewareInterface
 {
-    use LoggerAwareTrait;
+    private LoggerInterface $logger;
 
-    /**
-     * @var string
-     */
-    private $logLevel;
+    private string $logLevel;
 
     /**
      * @var array<string,string>
      */
-    private $exceptionLogLevelMap;
+    private array $exceptionLogLevelMap;
 
-    /**
-     * @var string
-     */
-    private $defaultExceptionLogLevel;
+    private string $defaultExceptionLogLevel;
 
-    /**
-     * @var LoggerMiddlewareMessagePredicateInterface
-     */
-    private $predicate;
+    private LoggerMiddlewareMessagePredicateInterface $predicate;
 
     /**
      * LoggerMiddleware constructor.
@@ -92,9 +81,7 @@ final class LoggerMiddleware implements MiddlewareInterface, LoggerAwareInterfac
         }
 
         return new ClosureLoggerMiddlewareMessagePredicate(
-            static function (object $message): bool {
-                return true;
-            }
+            static fn (object $message): bool => true
         );
     }
 

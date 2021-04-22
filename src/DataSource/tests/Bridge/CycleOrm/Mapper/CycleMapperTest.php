@@ -12,10 +12,7 @@ use spaceonfire\DataSource\Bridge\CycleOrm\AbstractCycleOrmTest;
 
 class CycleMapperTest extends AbstractCycleOrmTest
 {
-    /**
-     * @var BasicCycleMapper
-     */
-    private static $mapper;
+    private static ?\spaceonfire\DataSource\Bridge\CycleOrm\Mapper\BasicCycleMapper $mapper = null;
 
     protected function setUp(): void
     {
@@ -34,12 +31,8 @@ class CycleMapperTest extends AbstractCycleOrmTest
                     $this->hydrator->addStrategy(
                         'name',
                         new ClosureStrategy(
-                            static function ($value) {
-                                return Strings::upper((string)$value);
-                            },
-                            static function ($value) {
-                                return Strings::lower((string)$value);
-                            }
+                            static fn ($value) => Strings::upper((string)$value),
+                            static fn ($value) => Strings::lower((string)$value)
                         )
                     );
                 }

@@ -16,12 +16,9 @@ use Webmozart\Assert\Assert;
  *
  * @final
  */
-class ValueObjectStrategy implements StrategyInterface
+final class ValueObjectStrategy implements StrategyInterface
 {
-    /**
-     * @var string|BaseValueObject
-     */
-    private $valueObjectClass;
+    private string $valueObjectClass;
 
     /**
      * ValueObjectStrategy constructor.

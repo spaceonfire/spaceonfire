@@ -18,7 +18,7 @@ class UuidValueTest extends TestCase
         $val = $this->factory('42779f6d-e7c7-4572-8497-2d43bd9c1677');
         self::assertSame('42779f6d-e7c7-4572-8497-2d43bd9c1677', $val->value());
         self::assertSame('42779f6d-e7c7-4572-8497-2d43bd9c1677', (string)$val);
-        self::assertSame('"42779f6d-e7c7-4572-8497-2d43bd9c1677"', json_encode($val));
+        self::assertSame('"42779f6d-e7c7-4572-8497-2d43bd9c1677"', json_encode($val, JSON_THROW_ON_ERROR));
     }
 
     public function testConstructFromOtherUuidValueObject(): void

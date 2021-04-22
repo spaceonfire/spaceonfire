@@ -10,7 +10,7 @@ use stdClass;
 
 class StdClassHydratorTest extends TestCase
 {
-    private $hydrator;
+    private ?\spaceonfire\LaminasHydratorBridge\StdClassHydrator $hydrator = null;
 
     protected function setUp(): void
     {
@@ -31,9 +31,7 @@ class StdClassHydratorTest extends TestCase
 
     public function testWithFilter(): void
     {
-        $this->hydrator->addFilter('firstName', function ($fieldName) {
-            return $fieldName !== 'firstName';
-        });
+        $this->hydrator->addFilter('firstName', fn ($fieldName) => $fieldName !== 'firstName');
 
         $object = new stdClass();
         $object->id = 30;

@@ -6,10 +6,7 @@ namespace spaceonfire\Container\Fixtures;
 
 class B
 {
-    /**
-     * @var A
-     */
-    private $a;
+    private \spaceonfire\Container\Fixtures\A $a;
 
     /**
      * B constructor.

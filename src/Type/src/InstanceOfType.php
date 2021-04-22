@@ -11,7 +11,7 @@ final class InstanceOfType implements TypeInterface
     /**
      * @var string
      */
-    private $className;
+    private string $className;
 
     /**
      * InstanceOfType constructor.

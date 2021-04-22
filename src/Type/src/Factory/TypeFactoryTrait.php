@@ -9,7 +9,7 @@ trait TypeFactoryTrait
     /**
      * @var TypeFactoryInterface|null
      */
-    protected $parent;
+    protected ?TypeFactoryInterface $parent = null;
 
     /**
      * Setter for `parent` property

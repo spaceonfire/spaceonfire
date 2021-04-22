@@ -79,9 +79,7 @@ function buildDsn(array $options, string $driver = 'mysql'): string
     }
 
     $optionsString = implode(';', array_map(
-        static function ($v, $k) {
-            return sprintf('%s=%s', $k, $v);
-        },
+        static fn ($v, $k) => sprintf('%s=%s', $k, $v),
         array_values($optionsFiltered),
         array_keys($optionsFiltered)
     ));

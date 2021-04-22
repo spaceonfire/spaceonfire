@@ -11,7 +11,7 @@ class StringHelperTest extends TestCase
     private function stringableObjectFactory(string $value)
     {
         return new class($value) {
-            private $value;
+            private string $value;
 
             public function __construct(string $value)
             {

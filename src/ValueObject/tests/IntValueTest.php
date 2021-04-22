@@ -55,6 +55,6 @@ class IntValueTest extends TestCase
     public function testJson(): void
     {
         $val = $this->factory(5);
-        self::assertSame('5', json_encode($val));
+        self::assertSame('5', json_encode($val, JSON_THROW_ON_ERROR));
     }
 }

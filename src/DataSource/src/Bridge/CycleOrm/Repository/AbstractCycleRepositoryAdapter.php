@@ -5,6 +5,8 @@ declare(strict_types=1);
 namespace spaceonfire\DataSource\Bridge\CycleOrm\Repository;
 
 use Cycle\ORM;
+use Cycle\ORM\ORMInterface;
+use Cycle\ORM\Transaction;
 use spaceonfire\Collection\CollectionInterface;
 use spaceonfire\Criteria\CriteriaInterface;
 use spaceonfire\DataSource\Bridge\CycleOrm\Query\CycleQuery;
@@ -19,36 +21,24 @@ use Webmozart\Assert\Assert;
 
 abstract class AbstractCycleRepositoryAdapter implements RepositoryInterface
 {
-    /**
-     * @var string
-     */
-    protected $role;
+    protected string $role;
 
-    /**
-     * @var ORM\RepositoryInterface|ORM\Select\Repository
-     */
-    protected $repository;
+    protected ORM\RepositoryInterface $repository;
 
-    /**
-     * @var ORM\ORMInterface
-     */
-    protected $orm;
+    protected ORMInterface $orm;
 
-    /**
-     * @var ORM\Transaction
-     */
-    protected $transaction;
+    protected Transaction $transaction;
 
     /**
      * @param string $role
-     * @param ORM\ORMInterface $orm
+     * @param ORMInterface $orm
      */
-    public function __construct(string $role, ORM\ORMInterface $orm)
+    public function __construct(string $role, ORMInterface $orm)
     {
         $this->role = $role;
         $this->orm = $orm;
         $this->repository = $orm->getRepository($role);
-        $this->transaction = new ORM\Transaction($orm);
+        $this->transaction = new Transaction($orm);
     }
 
     /**
@@ -61,7 +51,7 @@ abstract class AbstractCycleRepositoryAdapter implements RepositoryInterface
 
         $this->transaction->persist(
             $entity,
-            $cascade ? ORM\Transaction::MODE_CASCADE : ORM\Transaction::MODE_ENTITY_ONLY
+            $cascade ? Transaction::MODE_CASCADE : Transaction::MODE_ENTITY_ONLY
         );
 
         try {
@@ -81,7 +71,7 @@ abstract class AbstractCycleRepositoryAdapter implements RepositoryInterface
 
         $this->transaction->delete(
             $entity,
-            $cascade ? ORM\Transaction::MODE_CASCADE : ORM\Transaction::MODE_ENTITY_ONLY
+            $cascade ? Transaction::MODE_CASCADE : Transaction::MODE_ENTITY_ONLY
         );
 
         try {

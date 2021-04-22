@@ -15,10 +15,7 @@ use spaceonfire\Container\RawValueHolder;
 
 class ArgumentResolverTest extends AbstractTestCase
 {
-    /**
-     * @var ArgumentResolver
-     */
-    private $resolver;
+    private ?\spaceonfire\Container\Argument\ArgumentResolver $resolver = null;
 
     protected function setUp(): void
     {

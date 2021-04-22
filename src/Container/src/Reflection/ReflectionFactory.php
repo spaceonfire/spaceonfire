@@ -14,10 +14,7 @@ use spaceonfire\Container\Exception\NotFoundException;
 
 final class ReflectionFactory
 {
-    /**
-     * @var ResolverInterface
-     */
-    private $argumentResolver;
+    private ResolverInterface $argumentResolver;
 
     /**
      * ReflectionFactory constructor.

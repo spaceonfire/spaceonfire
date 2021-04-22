@@ -12,13 +12,10 @@ class TestLogger implements LoggerInterface
 {
     use LoggerTrait;
 
-    /**
-     * @var bool
-     */
-    private $display = false;
+    private bool $display = false;
 
-    private $countWrites;
-    private $countReads;
+    private int $countWrites;
+    private int $countReads;
 
     public function __construct()
     {

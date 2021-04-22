@@ -6,10 +6,7 @@ namespace spaceonfire\Container\Fixtures\AbstractClass;
 
 final class AcceptNullableAbstractClass
 {
-    /**
-     * @var AbstractClass|null
-     */
-    private $abstractClass;
+    private ?\spaceonfire\Container\Fixtures\AbstractClass\AbstractClass $abstractClass = null;
 
     public function __construct(?AbstractClass $abstractClass)
     {

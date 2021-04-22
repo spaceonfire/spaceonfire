@@ -24,12 +24,9 @@ final class CompositeContainer implements ContainerWithServiceProvidersInterface
     /**
      * @var array<int, PsrContainerInterface[]>
      */
-    private $containers = [];
+    private array $containers = [];
 
-    /**
-     * @var ContainerInterface|null
-     */
-    private $primary;
+    private ?ContainerInterface $primary = null;
 
     /**
      * CompositeContainer constructor.

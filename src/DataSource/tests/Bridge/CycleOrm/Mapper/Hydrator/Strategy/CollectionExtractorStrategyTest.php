@@ -15,10 +15,7 @@ use SplObjectStorage;
 
 class CollectionExtractorStrategyTest extends AbstractCycleOrmTest
 {
-    /**
-     * @var CollectionExtractorStrategy
-     */
-    private $strategy;
+    private ?\spaceonfire\DataSource\Bridge\CycleOrm\Mapper\Hydrator\Strategy\CollectionExtractorStrategy $strategy = null;
 
     protected function setUp(): void
     {

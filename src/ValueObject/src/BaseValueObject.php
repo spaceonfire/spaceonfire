@@ -34,7 +34,7 @@ abstract class BaseValueObject implements JsonSerializable
      */
     public function __toString()
     {
-        return (string)$this->value();
+        return (string)$this->value;
     }
 
     /**
@@ -57,7 +57,7 @@ abstract class BaseValueObject implements JsonSerializable
             return false;
         }
 
-        return $other->value() === $this->value();
+        return $other->value() === $this->value;
     }
 
     /**

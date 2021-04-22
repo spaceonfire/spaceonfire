@@ -8,37 +8,25 @@ use spaceonfire\Criteria\Expression\ExpressionFactory;
 use Webmozart\Assert\Assert;
 use Webmozart\Expression\Expression;
 
-class Criteria implements CriteriaInterface
+final class Criteria implements CriteriaInterface
 {
-    /**
-     * @var Expression|null
-     */
-    protected $expression;
+    private ?Expression $expression = null;
 
     /**
      * @var array<string,int>
      */
-    protected $orderBy = [];
+    private array $orderBy = [];
 
-    /**
-     * @var int|null
-     */
-    protected $offset;
+    private ?int $offset = null;
 
-    /**
-     * @var int|null
-     */
-    protected $limit;
+    private ?int $limit = null;
 
     /**
      * @var mixed[]
      */
-    protected $include = [];
+    private array $include = [];
 
-    /**
-     * @var ExpressionFactory
-     */
-    private static $expressionFactory;
+    private static ?ExpressionFactory $expressionFactory = null;
 
     /**
      * Criteria constructor.

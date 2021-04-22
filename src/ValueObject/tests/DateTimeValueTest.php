@@ -13,10 +13,7 @@ use spaceonfire\ValueObject\Date\DateTimeValue;
 
 class DateTimeValueTest extends TestCase
 {
-    /**
-     * @var string
-     */
-    private static $oldTZ;
+    private static ?string $oldTZ = null;
 
     public static function setUpBeforeClass(): void
     {
@@ -49,7 +46,7 @@ class DateTimeValueTest extends TestCase
      */
     public function testJson(): void
     {
-        self::assertSame('"1978-01-23T10:40:00+00:00"', json_encode(DateTimeValue::from(254400000)));
+        self::assertSame('"1978-01-23T10:40:00+00:00"', json_encode(DateTimeValue::from(254_400_000), JSON_THROW_ON_ERROR));
     }
 
     /**
@@ -102,16 +99,16 @@ class DateTimeValueTest extends TestCase
      */
     public function testFrom(): void
     {
-        self::assertSame('1978-01-23 10:40:00', (string)DateTimeValue::from(254400000));
-        self::assertSame('1978-01-23 10:40:00', (string)(new DateTimeValue())->setTimestamp(254400000));
-        self::assertSame(254400000, DateTimeValue::from(254400000)->getTimestamp());
+        self::assertSame('1978-01-23 10:40:00', (string)DateTimeValue::from(254_400_000));
+        self::assertSame('1978-01-23 10:40:00', (string)(new DateTimeValue())->setTimestamp(254_400_000));
+        self::assertSame(254_400_000, DateTimeValue::from(254_400_000)->getTimestamp());
 
         // 64 bit
-        self::assertSame('2050-08-13 10:40:00', (string)DateTimeValue::from(2544000000));
-        self::assertSame('2050-08-13 10:40:00', (string)(new DateTimeValue())->setTimestamp(2544000000));
+        self::assertSame('2050-08-13 10:40:00', (string)DateTimeValue::from(2_544_000_000));
+        self::assertSame('2050-08-13 10:40:00', (string)(new DateTimeValue())->setTimestamp(2_544_000_000));
         self::assertSame(
-            is_int(2544000000) ? 2544000000 : '2544000000',
-            DateTimeValue::from(2544000000)->getTimestamp()
+            is_int(2_544_000_000) ? 2_544_000_000 : '2544000000',
+            DateTimeValue::from(2_544_000_000)->getTimestamp()
         );
 
         self::assertSame('1978-05-05 00:00:00', (string)DateTimeValue::from('1978-05-05'));

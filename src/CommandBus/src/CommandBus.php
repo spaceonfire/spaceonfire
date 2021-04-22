@@ -16,27 +16,15 @@ use function is_callable;
 /**
  * Receives a command and sends it through a chain of middleware for processing.
  */
-class CommandBus
+final class CommandBus
 {
-    /**
-     * @var CommandToHandlerMappingInterface
-     */
-    private $mapping;
+    private CommandToHandlerMappingInterface $mapping;
 
-    /**
-     * @var Closure
-     */
-    private $middlewareChain;
+    private Closure $middlewareChain;
 
-    /**
-     * @var ContainerInterface|null
-     */
-    private $container;
+    private ?ContainerInterface $container = null;
 
-    /**
-     * @var bool
-     */
-    private $isClone = false;
+    private bool $isClone = false;
 
     /**
      * CommandBus constructor.
@@ -94,7 +82,7 @@ class CommandBus
      * @param string $handlerClassName
      * @return object
      */
-    protected function createHandlerObject(string $handlerClassName): object
+    private function createHandlerObject(string $handlerClassName): object
     {
         if ($this->container && $this->container->has($handlerClassName)) {
             return $this->container->get($handlerClassName);
@@ -109,9 +97,7 @@ class CommandBus
      */
     private function createExecutionChain(array $middlewareList): Closure
     {
-        $lastCallable = function (object $command) {
-            return $this->createCommandHandler($command)($command);
-        };
+        $lastCallable = fn (object $command) => $this->createCommandHandler($command)($command);
 
         while ($middleware = array_pop($middlewareList)) {
             $lastCallable = function ($command) use ($middleware, $lastCallable) {

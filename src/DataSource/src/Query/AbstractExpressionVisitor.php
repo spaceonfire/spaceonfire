@@ -15,10 +15,7 @@ use Webmozart\Expression\Selector as SelectorNS;
 
 abstract class AbstractExpressionVisitor
 {
-    /**
-     * @var MapperInterface
-     */
-    protected $mapper;
+    protected MapperInterface $mapper;
 
     /**
      * AbstractExpressionVisitor constructor.

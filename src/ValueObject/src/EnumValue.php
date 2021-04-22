@@ -15,7 +15,7 @@ abstract class EnumValue extends BaseValueObject
     /**
      * @var string[][]
      */
-    protected static $cache = [];
+    protected static array $cache = [];
 
     /**
      * Support for magic methods
@@ -23,7 +23,7 @@ abstract class EnumValue extends BaseValueObject
      * @param array $args
      * @return static
      */
-    public static function __callStatic(string $name, $args)
+    public static function __callStatic(string $name, array $args)
     {
         return new static(self::values()[$name]);
     }

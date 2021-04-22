@@ -9,7 +9,7 @@ use Webmozart\Expression\Constraint\Same;
 
 class ExpressionFactoryTest extends TestCase
 {
-    private $factory;
+    private ?\spaceonfire\Criteria\Expression\ExpressionFactory $factory = null;
 
     protected function setUp(): void
     {

@@ -14,7 +14,7 @@ use Laminas\Hydrator\AbstractHydrator;
  *
  * @final
  */
-class StdClassHydrator extends AbstractHydrator
+final class StdClassHydrator extends AbstractHydrator
 {
     /**
      * @inheritDoc

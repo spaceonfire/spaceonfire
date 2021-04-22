@@ -14,12 +14,9 @@ use Webmozart\Expression\Selector\Key;
 use Webmozart\Expression\Selector\Property;
 use Webmozart\Expression\Selector\Selector as AbstractSelector;
 
-class Selector extends AbstractSelector
+final class Selector extends AbstractSelector
 {
-    /**
-     * @var PropertyPath
-     */
-    private $propertyPath;
+    private PropertyPath $propertyPath;
 
     /**
      * Selector expression constructor.

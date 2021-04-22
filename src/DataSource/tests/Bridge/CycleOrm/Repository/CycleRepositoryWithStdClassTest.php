@@ -11,7 +11,7 @@ use stdClass;
 
 class CycleRepositoryWithStdClassTest extends AbstractCycleOrmTest
 {
-    private static $repository;
+    private static ?\spaceonfire\DataSource\RepositoryInterface $repository = null;
 
     protected function setUp(): void
     {

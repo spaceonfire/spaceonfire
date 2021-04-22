@@ -19,7 +19,7 @@ final class MixedType implements TypeInterface
     /**
      * @inheritDoc
      */
-    public function check($_): bool
+    public function check($value): bool
     {
         return true;
     }

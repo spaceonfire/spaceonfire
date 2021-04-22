@@ -12,10 +12,7 @@ final class InstanceOfTypeFactory implements TypeFactoryInterface
 {
     use TypeFactoryTrait;
 
-    /**
-     * @var bool
-     */
-    private $autoload;
+    private bool $autoload;
 
     /**
      * InstanceOfTypeFactory constructor.

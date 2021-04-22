@@ -28,9 +28,7 @@ class LoggerMiddlewareTest extends AbstractTestCase
 
         $message = new FixtureMayBeLoggedMessage();
 
-        $result = $middleware->execute($message, function (object $message) {
-            return 'foo';
-        });
+        $result = $middleware->execute($message, fn (object $message) => 'foo');
 
         self::assertSame('foo', $result);
         self::assertTrue($logger->hasInfo(sprintf('Start handling %s command', FixtureMayBeLoggedMessage::class)));
@@ -69,9 +67,7 @@ class LoggerMiddlewareTest extends AbstractTestCase
         $message->setBeforeMessage('Before: {command}');
         $message->setAfterMessage('After: {command}');
 
-        $result = $middleware->execute($message, function (FixtureMayBeLoggedMessage $message) {
-            return 'foo';
-        });
+        $result = $middleware->execute($message, fn (FixtureMayBeLoggedMessage $message) => 'foo');
 
         self::assertSame('foo', $result);
         self::assertTrue($logger->hasInfo($message->renderBeforeMessage()));
@@ -184,9 +180,7 @@ class LoggerMiddlewareTest extends AbstractTestCase
             $predicateProphecy->reveal()
         );
 
-        $next = static function (FixtureMayBeLoggedMessage $message) {
-            return 'foo';
-        };
+        $next = static fn (FixtureMayBeLoggedMessage $message) => 'foo';
 
         $middleware->execute($redMessage, $next);
         $middleware->execute($greenMessage, $next);

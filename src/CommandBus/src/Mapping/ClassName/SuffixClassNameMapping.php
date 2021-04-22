@@ -4,12 +4,9 @@ declare(strict_types=1);
 
 namespace spaceonfire\CommandBus\Mapping\ClassName;
 
-class SuffixClassNameMapping implements ClassNameMappingInterface
+final class SuffixClassNameMapping implements ClassNameMappingInterface
 {
-    /**
-     * @var string
-     */
-    private $suffix;
+    private string $suffix;
 
     /**
      * SuffixClassNameMapping constructor.

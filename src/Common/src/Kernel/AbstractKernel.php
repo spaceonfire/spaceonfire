@@ -14,15 +14,9 @@ use spaceonfire\Container\ServiceProvider\ServiceProviderInterface;
 
 abstract class AbstractKernel
 {
-    /**
-     * @var ContainerInterface
-     */
-    protected $container;
+    protected ContainerInterface $container;
 
-    /**
-     * @var bool
-     */
-    protected $debugModeEnabled;
+    protected bool $debugModeEnabled;
 
     /**
      * AbstractKernel constructor.

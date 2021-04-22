@@ -19,17 +19,14 @@ use Webmozart\Assert\Assert;
  *
  * @final
  */
-class DateValueStrategy implements StrategyInterface
+final class DateValueStrategy implements StrategyInterface
 {
     /**
      * @var class-string<DateTimeValueInterface>
      */
-    private $dateClass;
+    private string $dateClass;
 
-    /**
-     * @var string
-     */
-    private $format;
+    private string $format;
 
     /**
      * DateValueStrategy constructor.

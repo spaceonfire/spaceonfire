@@ -75,12 +75,9 @@ use Webmozart\Expression\Logic;
  * @method Logic\AlwaysTrue orTrue()
  * @method self orFalse()
  */
-class AbstractExpressionDecorator implements Expression
+abstract class AbstractExpressionDecorator implements Expression
 {
-    /**
-     * @var Expression
-     */
-    private $expr;
+    private Expression $expr;
 
     /**
      * Expression Adapter constructor

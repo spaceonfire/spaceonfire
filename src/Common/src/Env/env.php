@@ -42,9 +42,7 @@ function env(string $name, $default = null)
         }
         // @codeCoverageIgnoreStop
 
-        $envPath = array_filter(array_unique($envPath), static function ($path) {
-            return is_dir($path);
-        });
+        $envPath = array_filter(array_unique($envPath), static fn ($path) => is_dir($path));
 
         $dotEnv = RepositoryBuilder::createWithDefaultAdapters()->immutable()->make();
         Dotenv::create($dotEnv, array_unique($envPath), $envFileName)->safeLoad();

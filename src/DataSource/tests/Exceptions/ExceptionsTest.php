@@ -52,9 +52,7 @@ class ExceptionsTest extends TestCase
         $exception = new NotFoundException(null, [
             'primary' => 1,
         ]);
-        $res = $exception->render(static function () {
-            return 'Запись не найдена по id: "{primary}"';
-        });
+        $res = $exception->render(static fn () => 'Запись не найдена по id: "{primary}"');
         self::assertEquals('Запись не найдена по id: "1"', $res);
     }
 

@@ -8,10 +8,7 @@ use spaceonfire\CommandBus\CommandBus as MessageBus;
 
 abstract class AbstractCommandBus implements CommandBusInterface
 {
-    /**
-     * @var MessageBus
-     */
-    private $bus;
+    private MessageBus $bus;
 
     public function __construct(MessageBus $bus)
     {

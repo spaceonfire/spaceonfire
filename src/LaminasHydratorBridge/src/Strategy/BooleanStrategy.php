@@ -15,22 +15,19 @@ use Laminas\Hydrator\Strategy\StrategyInterface;
  *
  * @final
  */
-class BooleanStrategy implements StrategyInterface
+final class BooleanStrategy implements StrategyInterface
 {
     /**
      * @var array<int|string>
      */
-    private $trueValue;
+    private array $trueValue;
 
     /**
      * @var array<int|string>
      */
-    private $falseValue;
+    private array $falseValue;
 
-    /**
-     * @var bool
-     */
-    private $strict;
+    private bool $strict;
 
     /**
      * BooleanStrategy constructor.

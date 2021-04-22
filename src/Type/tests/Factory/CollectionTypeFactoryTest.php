@@ -19,9 +19,7 @@ class CollectionTypeFactoryTest extends TestCase
 
     private function makeIterableTypeFactory(): TypeFactoryInterface
     {
-        return new PartialSupportTypeFactory(new BuiltinTypeFactory(), function (string $type): bool {
-            return in_array($type, ['array', 'iterable'], true);
-        });
+        return new PartialSupportTypeFactory(new BuiltinTypeFactory(), fn (string $type): bool => in_array($type, ['array', 'iterable'], true));
     }
 
     public function testSupports(): void

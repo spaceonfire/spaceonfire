@@ -169,14 +169,10 @@ class CompositeContainerTest extends AbstractTestCase
 
         self::assertFalse($resolved->isEmpty());
 
-        $foo = $resolved->find(function ($v) {
-            return $v === 'foo';
-        });
+        $foo = $resolved->find(fn ($v) => $v === 'foo');
         self::assertSame('foo', $foo);
 
-        $bar = $resolved->find(function ($v) {
-            return $v === 'bar';
-        });
+        $bar = $resolved->find(fn ($v) => $v === 'bar');
         self::assertSame('bar', $bar);
     }
 

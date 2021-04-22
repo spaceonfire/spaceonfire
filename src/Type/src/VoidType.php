@@ -21,7 +21,7 @@ final class VoidType implements TypeInterface
     /**
      * @inheritDoc
      */
-    public function check($_): bool
+    public function check($value): bool
     {
         throw new RuntimeException('Void type cannot be checked');
     }

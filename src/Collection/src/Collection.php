@@ -8,7 +8,6 @@ use ArrayIterator;
 use BadMethodCallException;
 use InvalidArgumentException;
 use JsonSerializable;
-use RuntimeException;
 use spaceonfire\Criteria\CriteriaInterface;
 use Traversable;
 
@@ -25,7 +24,7 @@ final class Collection implements CollectionInterface
     /**
      * @var array The items contained in the collection.
      */
-    protected $items = [];
+    private array $items;
 
     /**
      * Collection constructor.
@@ -133,7 +132,7 @@ final class Collection implements CollectionInterface
     /** {@inheritDoc} */
     public function reduce(callable $callback, $initialValue = null)
     {
-        return array_reduce($this->all(), $callback, $initialValue);
+        return array_reduce($this->items, $callback, $initialValue);
     }
 
     /**
@@ -192,7 +191,7 @@ final class Collection implements CollectionInterface
      * {@inheritDoc}
      * @return int
      */
-    public function count()
+    public function count(): int
     {
         return count($this->items);
     }
@@ -205,7 +204,7 @@ final class Collection implements CollectionInterface
      */
     public function sort(int $direction = SORT_ASC, int $sortFlag = SORT_REGULAR): CollectionInterface
     {
-        $items = $this->all();
+        $items = $this->items;
         if (SORT_ASC === $direction) {
             asort($items, $sortFlag);
         } else {
@@ -222,7 +221,7 @@ final class Collection implements CollectionInterface
      */
     public function sortByKey(int $direction = SORT_ASC, int $sortFlag = SORT_REGULAR): CollectionInterface
     {
-        $items = $this->all();
+        $items = $this->items;
         if (SORT_ASC === $direction) {
             ksort($items, $sortFlag);
         } else {
@@ -239,7 +238,7 @@ final class Collection implements CollectionInterface
      */
     public function sortNatural(bool $caseSensitive = false): CollectionInterface
     {
-        $items = $this->all();
+        $items = $this->items;
         if ($caseSensitive) {
             natsort($items);
         } else {
@@ -263,7 +262,7 @@ final class Collection implements CollectionInterface
      */
     public function sortBy($key, $direction = SORT_ASC, $sortFlag = SORT_REGULAR): CollectionInterface
     {
-        $items = $this->all();
+        $items = $this->items;
         ArrayHelper::multisort($items, $key, $direction, $sortFlag);
         return $this->newStatic($items);
     }
@@ -274,7 +273,7 @@ final class Collection implements CollectionInterface
      */
     public function reverse(): CollectionInterface
     {
-        return $this->newStatic(array_reverse($this->all(), true));
+        return $this->newStatic(array_reverse($this->items, true));
     }
 
     /**
@@ -283,7 +282,7 @@ final class Collection implements CollectionInterface
      */
     public function values(): CollectionInterface
     {
-        return $this->newStatic(array_values($this->all()));
+        return $this->newStatic(array_values($this->items));
     }
 
     /**
@@ -292,7 +291,7 @@ final class Collection implements CollectionInterface
      */
     public function keys(): CollectionInterface
     {
-        return $this->newStatic(array_keys($this->all()));
+        return $this->newStatic(array_keys($this->items));
     }
 
     /**
@@ -301,7 +300,7 @@ final class Collection implements CollectionInterface
      */
     public function flip(): CollectionInterface
     {
-        return $this->newStatic(array_flip($this->all()));
+        return $this->newStatic(array_flip($this->items));
     }
 
     /**
@@ -314,10 +313,8 @@ final class Collection implements CollectionInterface
     public function merge(...$collections): CollectionInterface
     {
         return $this->newStatic(array_merge(
-            $this->all(),
-            ...array_map(function ($collection) {
-                return $this->getItems($collection);
-            }, $collections)
+            $this->items,
+            ...array_map(fn ($collection) => $this->getItems($collection), $collections)
         ));
     }
 
@@ -327,9 +324,7 @@ final class Collection implements CollectionInterface
      */
     public function indexBy($key): CollectionInterface
     {
-        return $this->remap($key, static function ($item) {
-            return $item;
-        });
+        return $this->remap($key, static fn ($item) => $item);
     }
 
     /**
@@ -338,7 +333,7 @@ final class Collection implements CollectionInterface
      */
     public function remap($from, $to): CollectionInterface
     {
-        return $this->newStatic(ArrayHelper::map($this->all(), $from, $to));
+        return $this->newStatic(ArrayHelper::map($this->items, $from, $to));
     }
 
     /**
@@ -349,7 +344,7 @@ final class Collection implements CollectionInterface
     {
         $result = [];
 
-        foreach ($this->all() as $key => $element) {
+        foreach ($this->items as $key => $element) {
             if ($preserveKeys) {
                 $result[ArrayHelper::getValue($element, $groupField)][$key] = $element;
             } else {
@@ -357,9 +352,7 @@ final class Collection implements CollectionInterface
             }
         }
 
-        return $this->newStatic(array_map(function ($groupItems) {
-            return $this->newStatic($groupItems);
-        }, $result));
+        return $this->newStatic(array_map(fn ($groupItems) => $this->newStatic($groupItems), $result));
     }
 
     /**
@@ -370,13 +363,10 @@ final class Collection implements CollectionInterface
         if (is_callable($item)) {
             $test = $item;
         } else {
-            $test = static function ($i) use ($strict, $item) {
-                /** @noinspection TypeUnsafeComparisonInspection */
-                return $strict ? $i === $item : $i == $item;
-            };
+            $test = static fn ($i) => $strict ? $i === $item : $i == $item;
         }
 
-        foreach ($this->all() as $i) {
+        foreach ($this->items as $i) {
             if ($test($i)) {
                 return true;
             }
@@ -392,18 +382,11 @@ final class Collection implements CollectionInterface
     public function remove($item, bool $strict = false): CollectionInterface
     {
         if (is_callable($item)) {
-            $fun = static function ($i) use ($item) {
-                return !$item($i);
-            };
+            $fun = static fn ($i) => !$item($i);
         } elseif ($strict) {
-            $fun = static function ($i) use ($item) {
-                return $i !== $item;
-            };
+            $fun = static fn ($i) => $i !== $item;
         } else {
-            $fun = static function ($i) use ($item) {
-                /** @noinspection TypeUnsafeComparisonInspection */
-                return $i != $item;
-            };
+            $fun = static fn ($i) => $i != $item;
         }
         return $this->filter($fun);
     }
@@ -415,16 +398,16 @@ final class Collection implements CollectionInterface
     public function filter(?callable $callback = null): CollectionInterface
     {
         if (null === $callback) {
-            return $this->newStatic(array_filter($this->all()));
+            return $this->newStatic(array_filter($this->items));
         }
 
-        return $this->newStatic(array_filter($this->all(), $callback, ARRAY_FILTER_USE_BOTH));
+        return $this->newStatic(array_filter($this->items, $callback, ARRAY_FILTER_USE_BOTH));
     }
 
     /** {@inheritDoc} */
     public function find(callable $callback)
     {
-        foreach ($this->all() as $key => $item) {
+        foreach ($this->items as $key => $item) {
             if (true === $callback($item, $key)) {
                 return $item;
             }
@@ -462,7 +445,7 @@ final class Collection implements CollectionInterface
      */
     public function slice(int $offset, ?int $limit = null, bool $preserveKeys = true): CollectionInterface
     {
-        return $this->newStatic(array_slice($this->all(), $offset, $limit, $preserveKeys));
+        return $this->newStatic(array_slice($this->items, $offset, $limit, $preserveKeys));
     }
 
     /**
@@ -474,9 +457,7 @@ final class Collection implements CollectionInterface
         $result = $this->newStatic($this->items);
 
         if (null !== $expression = $criteria->getWhere()) {
-            $result = $result->filter(static function ($item) use ($expression) {
-                return $expression->evaluate($item);
-            });
+            $result = $result->filter(static fn ($item) => $expression->evaluate($item));
         }
 
         if ([] !== $orderBy = $criteria->getOrderBy()) {
@@ -550,7 +531,7 @@ final class Collection implements CollectionInterface
      * {@inheritDoc}
      * @param mixed $offset
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return array_key_exists($offset, $this->items);
     }
@@ -593,27 +574,16 @@ final class Collection implements CollectionInterface
      */
     public function toJson(int $options = 0): string
     {
-        $json = json_encode($this->jsonSerialize(), $options);
-
-        if (false === $json) {
-            // @codeCoverageIgnoreStart
-            throw new RuntimeException(
-                'Error while encoding collection to JSON: ' . json_last_error_msg(),
-                json_last_error()
-            );
-            // @codeCoverageIgnoreEnd
-        }
-
-        return $json;
+        return json_encode($this->items, JSON_THROW_ON_ERROR | $options) ?: '';
     }
 
     /**
      * {@inheritDoc}
-     * @return array|mixed
+     * @return iterable<mixed>
      */
     public function jsonSerialize()
     {
-        return $this->all();
+        return $this->items;
     }
 
     /**
@@ -621,7 +591,7 @@ final class Collection implements CollectionInterface
      * @param mixed $items
      * @return array
      */
-    protected function getItems($items): array
+    private function getItems($items): array
     {
         if (is_array($items)) {
             return $items;
@@ -647,8 +617,8 @@ final class Collection implements CollectionInterface
      * @param array $items
      * @return static
      */
-    protected function newStatic(array $items = []): CollectionInterface
+    private function newStatic(array $items = []): CollectionInterface
     {
-        return new static($items);
+        return new self($items);
     }
 }

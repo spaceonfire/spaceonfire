@@ -93,9 +93,7 @@ abstract class AbstractCollectionTest extends TestCase
     {
         $collection = $this->factory([1, 2, 3]);
 
-        self::assertEquals(6, $collection->reduce(static function ($accum, $val) {
-            return $accum * $val;
-        }, 1));
+        self::assertEquals(6, $collection->reduce(static fn ($accum, $val) => $accum * $val, 1));
     }
 
     public function testSum()
@@ -179,9 +177,7 @@ abstract class AbstractCollectionTest extends TestCase
     {
         $collection = $this->factory([1, 3, 2]);
 
-        self::assertEquals([2, 6, 4], $collection->map(static function ($val) {
-            return $val * 2;
-        })->all());
+        self::assertEquals([2, 6, 4], $collection->map(static fn ($val) => $val * 2)->all());
     }
 
     public function testSort(): void
@@ -326,12 +322,8 @@ abstract class AbstractCollectionTest extends TestCase
         self::assertTrue($collection->contains(2));
         self::assertFalse($collection->contains(2, true));
         self::assertFalse($collection->contains(10));
-        self::assertTrue($collection->contains(static function ($item) {
-            return $item === '2';
-        }));
-        self::assertFalse($collection->contains(static function ($item) {
-            return $item === 2;
-        }));
+        self::assertTrue($collection->contains(static fn ($item) => $item === '2'));
+        self::assertFalse($collection->contains(static fn ($item) => $item === 2));
     }
 
     public function testRemove()
@@ -341,9 +333,7 @@ abstract class AbstractCollectionTest extends TestCase
         $collection = $this->factory([1, '2', 3]);
         self::assertEquals([1, '2', 3], $collection->remove(2, true)->all());
         $collection = $this->factory([1, '2', '3']);
-        self::assertEquals([1], $collection->remove(static function ($item) {
-            return is_string($item);
-        })->all());
+        self::assertEquals([1], $collection->remove(static fn ($item) => is_string($item))->all());
     }
 
     public function testFilter()
@@ -355,20 +345,14 @@ abstract class AbstractCollectionTest extends TestCase
     public function testFilterWithCallback()
     {
         $collection = $this->factory([1, 2, 3, 4, 5, 6]);
-        self::assertEquals([1 => 2, 3 => 4, 5 => 6], $collection->filter(static function ($item) {
-            return $item % 2 === 0;
-        })->all());
+        self::assertEquals([1 => 2, 3 => 4, 5 => 6], $collection->filter(static fn ($item) => $item % 2 === 0)->all());
     }
 
     public function testFind()
     {
         $collection = $this->factory([1, 2, 3, 4, 5, 6]);
-        self::assertEquals(2, $collection->find(static function ($item) {
-            return $item % 2 === 0;
-        }));
-        self::assertNull($collection->find(static function ($item) {
-            return $item === 100;
-        }));
+        self::assertEquals(2, $collection->find(static fn ($item) => $item % 2 === 0));
+        self::assertNull($collection->find(static fn ($item) => $item === 100));
     }
 
     public function testReplace()
@@ -419,20 +403,18 @@ abstract class AbstractCollectionTest extends TestCase
 
     public function testImplodeObjects()
     {
-        $stringableFactory = function (string $value) {
-            return new class($value) {
-                private $value;
+        $stringableFactory = fn (string $value) => new class($value) {
+            private string $value;
 
-                public function __construct($value)
-                {
-                    $this->value = $value;
-                }
+            public function __construct($value)
+            {
+                $this->value = $value;
+            }
 
-                public function __toString(): string
-                {
-                    return $this->value;
-                }
-            };
+            public function __toString(): string
+            {
+                return $this->value;
+            }
         };
         $collection = $this->factory([
             $stringableFactory('hello'),
@@ -443,15 +425,13 @@ abstract class AbstractCollectionTest extends TestCase
 
     public function testImplodeWihField()
     {
-        $objectFactory = function (string $value) {
-            return new class($value) {
-                public $value;
+        $objectFactory = fn (string $value) => new class($value) {
+            public $value;
 
-                public function __construct($value)
-                {
-                    $this->value = $value;
-                }
-            };
+            public function __construct($value)
+            {
+                $this->value = $value;
+            }
         };
 
         $collection = $this->factory([
@@ -464,15 +444,13 @@ abstract class AbstractCollectionTest extends TestCase
 
     public function testImplodeFail()
     {
-        $objectFactory = function (string $value) {
-            return new class($value) {
-                public $value;
+        $objectFactory = fn (string $value) => new class($value) {
+            public $value;
 
-                public function __construct($value)
-                {
-                    $this->value = $value;
-                }
-            };
+            public function __construct($value)
+            {
+                $this->value = $value;
+            }
         };
         $this->expectException(BadMethodCallException::class);
         $collection = $this->factory([
@@ -625,7 +603,7 @@ abstract class AbstractCollectionTest extends TestCase
     public function testJsonSerialize()
     {
         $collection = $this->factory(['a', 'b', 'c']);
-        self::assertJson(json_encode($collection));
+        self::assertJson(json_encode($collection, JSON_THROW_ON_ERROR));
     }
 
     public function testToJson()

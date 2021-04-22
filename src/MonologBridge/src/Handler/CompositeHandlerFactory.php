@@ -12,7 +12,7 @@ final class CompositeHandlerFactory
     /**
      * @var array<string,HandlerFactoryInterface[]>
      */
-    private $factoriesPerType = [];
+    private array $factoriesPerType = [];
 
     /**
      * CompositeHandlerFactory constructor.

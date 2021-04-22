@@ -13,12 +13,9 @@ abstract class AbstractAggregatedType implements TypeInterface, IteratorAggregat
     /**
      * @var TypeInterface[]
      */
-    protected $types;
+    protected array $types;
 
-    /**
-     * @var string
-     */
-    protected $delimiter;
+    protected string $delimiter;
 
     public function __construct(iterable $types, string $delimiter)
     {

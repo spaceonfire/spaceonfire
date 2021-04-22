@@ -35,9 +35,9 @@ class ServiceProviderAggregateTest extends AbstractTestCase
     private function createServiceProvider(?string $id = null, array $provides = [], array $tags = []): ServiceProviderInterface
     {
         return new class($id, $provides, $tags) extends AbstractServiceProvider {
-            private $provides;
-            private $tags;
-            private $registered = false;
+            private array $provides;
+            private array $tags;
+            private bool $registered = false;
 
             public function __construct(?string $id = null, array $provides = [], array $tags = [])
             {
@@ -119,7 +119,7 @@ class ServiceProviderAggregateTest extends AbstractTestCase
         $aggregate = $this->createAggregate();
 
         $provider = new class extends AbstractServiceProvider implements BootableServiceProviderInterface {
-            public $booted = false;
+            public bool $booted = false;
 
             public function boot(): void
             {

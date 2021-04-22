@@ -19,9 +19,7 @@ class ProfilerMiddlewareTest extends AbstractTestCase
 
         $message = new FixtureMayBeProfiledMessage();
 
-        $result = $middleware->execute($message, function ($message) {
-            return 'foo';
-        });
+        $result = $middleware->execute($message, fn ($message) => 'foo');
 
         $expectedEventName = get_class($message) . '_' . spl_object_hash($message);
 
@@ -39,9 +37,7 @@ class ProfilerMiddlewareTest extends AbstractTestCase
 
         $message = new FixtureMayBeProfiledMessage();
 
-        $result = $middleware->execute($message, function ($message) {
-            return 'foo';
-        });
+        $result = $middleware->execute($message, fn ($message) => 'foo');
 
         $expectedEventName = get_class($message) . '_' . spl_object_hash($message);
         $event = $stopwatch->getEvent($expectedEventName);
@@ -67,9 +63,7 @@ class ProfilerMiddlewareTest extends AbstractTestCase
         $message->setProfilingEventName('custom_event_name');
         $message->setProfilingCategory('custom_category');
 
-        $result = $middleware->execute($message, function ($message) {
-            return 'foo';
-        });
+        $result = $middleware->execute($message, fn ($message) => 'foo');
 
         $event = $stopwatch->getEvent('custom_event_name');
 
@@ -95,9 +89,7 @@ class ProfilerMiddlewareTest extends AbstractTestCase
             $predicateProphecy->reveal()
         );
 
-        $next = static function (FixtureMayBeProfiledMessage $message) {
-            return 'foo';
-        };
+        $next = static fn (FixtureMayBeProfiledMessage $message) => 'foo';
 
         $middleware->execute($redMessage, $next);
         $middleware->execute($greenMessage, $next);

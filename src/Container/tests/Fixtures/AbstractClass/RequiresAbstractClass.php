@@ -6,10 +6,7 @@ namespace spaceonfire\Container\Fixtures\AbstractClass;
 
 final class RequiresAbstractClass
 {
-    /**
-     * @var AbstractClass
-     */
-    private $abstractClass;
+    private \spaceonfire\Container\Fixtures\AbstractClass\AbstractClass $abstractClass;
 
     public function __construct(AbstractClass $abstractClass)
     {

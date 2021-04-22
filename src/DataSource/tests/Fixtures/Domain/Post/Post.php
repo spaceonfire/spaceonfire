@@ -13,18 +13,9 @@ use spaceonfire\DataSource\AbstractEntity;
  */
 class Post extends AbstractEntity
 {
-    /**
-     * @var string|null
-     */
-    private $id;
-    /**
-     * @var string|null
-     */
-    private $title;
-    /**
-     * @var string|null
-     */
-    private $authorId;
+    private ?string $id = null;
+    private ?string $title = null;
+    private ?string $authorId = null;
 
     /**
      * Post constructor.

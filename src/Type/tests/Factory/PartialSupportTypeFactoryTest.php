@@ -13,9 +13,7 @@ class PartialSupportTypeFactoryTest extends TestCase
     public function testSupports(): void
     {
         $decoratedFactory = new BuiltinTypeFactory();
-        $factory = new PartialSupportTypeFactory($decoratedFactory, function ($type) {
-            return $type === BuiltinType::INT;
-        });
+        $factory = new PartialSupportTypeFactory($decoratedFactory, fn ($type) => $type === BuiltinType::INT);
 
         self::assertTrue($decoratedFactory->supports(BuiltinType::INT));
         self::assertTrue($factory->supports(BuiltinType::INT));
@@ -26,9 +24,7 @@ class PartialSupportTypeFactoryTest extends TestCase
     public function testMake(): void
     {
         $decoratedFactory = new BuiltinTypeFactory();
-        $factory = new PartialSupportTypeFactory($decoratedFactory, function ($type) {
-            return $type === BuiltinType::INT;
-        });
+        $factory = new PartialSupportTypeFactory($decoratedFactory, fn ($type) => $type === BuiltinType::INT);
 
         self::assertEquals(
             $decoratedFactory->make(BuiltinType::INT),
@@ -39,9 +35,7 @@ class PartialSupportTypeFactoryTest extends TestCase
     public function testMakeException(): void
     {
         $decoratedFactory = new BuiltinTypeFactory();
-        $factory = new PartialSupportTypeFactory($decoratedFactory, function ($type) {
-            return $type === BuiltinType::INT;
-        });
+        $factory = new PartialSupportTypeFactory($decoratedFactory, fn ($type) => $type === BuiltinType::INT);
 
         $decoratedFactory->make(BuiltinType::STRING);
 

@@ -19,10 +19,7 @@ final class ReflectionInvoker implements ContainerAwareInterface
 {
     use ContainerAwareTrait;
 
-    /**
-     * @var ResolverInterface
-     */
-    private $argumentResolver;
+    private ResolverInterface $argumentResolver;
 
     /**
      * ReflectionInvoker constructor.

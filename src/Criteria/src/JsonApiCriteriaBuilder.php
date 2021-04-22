@@ -13,37 +13,31 @@ use Webmozart\Assert\Assert;
  *
  * TODO: support parsing filter
  */
-class JsonApiCriteriaBuilder
+final class JsonApiCriteriaBuilder
 {
-    /**
-     * @var int|null
-     */
-    protected $page;
+    private ?int $page = null;
 
-    /**
-     * @var int|null
-     */
-    protected $pageSize;
+    private ?int $pageSize = null;
 
     /**
      * @var int[]
      */
-    protected $pageSizeRange = [10, 250];
+    private array $pageSizeRange = [10, 250];
 
     /**
      * @var array<string,int>|null
      */
-    protected $orderings;
+    private ?array $orderings = null;
 
     /**
-     * @var array|null
+     * @var string[]|null
      */
-    protected $allowedOrderByFields;
+    private ?array $allowedOrderByFields = null;
 
     /**
      * @var mixed[]
      */
-    protected $include = [];
+    private array $include = [];
 
     /**
      * Set page number

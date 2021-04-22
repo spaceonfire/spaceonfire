@@ -14,7 +14,7 @@ use spaceonfire\CommandBus\Mapping\Method\StaticMethodNameMapping;
 
 class CompositeMappingTest extends TestCase
 {
-    private $mapping;
+    private ?\spaceonfire\CommandBus\Mapping\CompositeMapping $mapping = null;
 
     protected function setUp(): void
     {

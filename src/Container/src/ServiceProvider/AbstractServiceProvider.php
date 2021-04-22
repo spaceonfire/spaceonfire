@@ -10,10 +10,7 @@ abstract class AbstractServiceProvider implements ServiceProviderInterface
 {
     use ContainerAwareTrait;
 
-    /**
-     * @var string|null
-     */
-    protected $identifier;
+    protected ?string $identifier = null;
 
     /**
      * @inheritDoc

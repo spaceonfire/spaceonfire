@@ -14,7 +14,7 @@ final class MapByStaticList implements CommandToHandlerMappingInterface
     /**
      * @var array<string, array<string>>
      */
-    private $mapping;
+    private array $mapping;
 
     /**
      * MapByStaticList constructor.

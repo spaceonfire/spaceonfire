@@ -26,9 +26,7 @@ class EnvTest extends TestCase
             ['BAZ', null, null],
             [
                 'BAZ',
-                function () {
-                    return 'baz';
-                },
+                fn () => 'baz',
                 'baz',
             ],
             ['TRUE', null, true],

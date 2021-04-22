@@ -15,15 +15,12 @@ use spaceonfire\Type\InstanceOfType;
 
 final class DefinitionAggregate extends AbstractCollectionDecorator implements DefinitionAggregateInterface
 {
-    /**
-     * @var DefinitionFactoryInterface
-     */
-    private $definitionFactory;
+    private DefinitionFactoryInterface $definitionFactory;
 
     /**
      * @var array<string,string>
      */
-    private $tags = [];
+    private array $tags = [];
 
     /**
      * DefinitionAggregate constructor.
@@ -138,12 +135,8 @@ final class DefinitionAggregate extends AbstractCollectionDecorator implements D
     public function resolveTagged(string $tag, ContainerInterface $container): CollectionInterface
     {
         return (new Collection($this->getIterator()))
-            ->filter(static function (DefinitionInterface $definition) use ($tag) {
-                return $definition->hasTag($tag);
-            })
-            ->map(static function (DefinitionInterface $definition) use ($container) {
-                return $definition->resolve($container);
-            });
+            ->filter(static fn (DefinitionInterface $definition) => $definition->hasTag($tag))
+            ->map(static fn (DefinitionInterface $definition) => $definition->resolve($container));
     }
 
     /**

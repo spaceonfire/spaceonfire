@@ -15,7 +15,7 @@ abstract class AbstractHandlerFactory implements HandlerFactoryInterface
 
     /**
      * @param array<string,mixed> $parameters
-     * @return mixed|object
+     * @return object|mixed
      */
     final protected function hydrateParameters(array $parameters)
     {

@@ -32,9 +32,7 @@ class DefinitionTest extends AbstractTestCase
         self::assertSame($objectConcrete, $object->getConcrete());
         self::assertTrue($object->isShared());
 
-        $closure = new Definition('foo', $closureConcrete = static function () {
-            return 'bar';
-        });
+        $closure = new Definition('foo', $closureConcrete = static fn () => 'bar');
         self::assertSame('foo', $closure->getAbstract());
         self::assertSame($closureConcrete, $closure->getConcrete());
         self::assertFalse($closure->isShared());
@@ -57,16 +55,12 @@ class DefinitionTest extends AbstractTestCase
     {
         $containerProphecy = $this->prophesize(ContainerInterface::class);
         $containerProphecy->invoke(ArgumentProphecy::type('callable'), ArgumentProphecy::type('iterable'))
-            ->will(function ($args) {
-                return call_user_func_array($args[0], $args[1]);
-            });
+            ->will(fn ($args) => call_user_func_array($args[0], $args[1]));
 
         /** @var ContainerInterface $container */
         $container = $containerProphecy->reveal();
 
-        $definition = new Definition('foo', static function (Argument $arg) use ($container) {
-            return $arg->resolve($container);
-        });
+        $definition = new Definition('foo', static fn (Argument $arg) => $arg->resolve($container));
 
         $definition->addArguments([new Argument('arg', null, new RawValueHolder('bar'))]);
 
@@ -76,7 +70,7 @@ class DefinitionTest extends AbstractTestCase
     public function testAddMethodCalls(): void
     {
         $concrete = new class {
-            public $patchedTimes = 0;
+            public int $patchedTimes = 0;
 
             public function patch(): void
             {
@@ -86,9 +80,7 @@ class DefinitionTest extends AbstractTestCase
 
         $containerProphecy = $this->prophesize(ContainerInterface::class);
         $containerProphecy->invoke(ArgumentProphecy::type('callable'), ArgumentProphecy::type('iterable'))
-            ->will(function ($args) {
-                return call_user_func_array($args[0], $args[1]);
-            });
+            ->will(fn ($args) => call_user_func_array($args[0], $args[1]));
         $containerProphecy->has('bar')->willReturn(true);
         $containerProphecy->get('bar')->willReturn($concrete);
         /** @var ContainerInterface $container */

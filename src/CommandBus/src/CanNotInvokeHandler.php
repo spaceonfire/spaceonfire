@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace spaceonfire\CommandBus;
 
 use BadMethodCallException;
-use Throwable;
 use function get_class;
 
 /**
@@ -15,24 +14,23 @@ use function get_class;
  */
 final class CanNotInvokeHandler extends BadMethodCallException implements ExceptionInterface
 {
-    /**
-     * @var object
-     */
-    private $command;
+    private object $command;
 
-    private function __construct(string $message = '', int $code = 0, ?Throwable $previous = null)
+    private function __construct(object $command, string $message = '')
     {
-        parent::__construct($message, $code, $previous);
+        parent::__construct($message);
+
+        $this->command = $command;
     }
 
     public static function forCommand(object $command, string $reason): self
     {
         $type = get_class($command);
 
-        $exception = new self(sprintf('Could not invoke handler for command %s for reason: %s', $type, $reason));
-        $exception->command = $command;
-
-        return $exception;
+        return new self(
+            $command,
+            sprintf('Could not invoke handler for command %s for reason: %s', $type, $reason)
+        );
     }
 
     /**

@@ -22,11 +22,8 @@ class InMemoryUserRepository implements UserRepositoryInterface
     /**
      * @var User[]
      */
-    private $storage;
-    /**
-     * @var MapperInterface
-     */
-    private $mapper;
+    private array $storage;
+    private \spaceonfire\DataSource\MapperInterface $mapper;
 
     /**
      * InMemoryUserRepository constructor.

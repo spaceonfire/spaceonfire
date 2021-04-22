@@ -10,6 +10,7 @@ parameters:
 			count: 1
 			path: src/Collection/src/AbstractCollectionDecorator.php
 
+
 		-
 			message: "#^Method spaceonfire\\\\Collection\\\\AbstractCollectionDecorator\\:\\:downgrade\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
 			count: 1
@@ -236,7 +237,7 @@ parameters:
 			path: src/Collection/src/ArrayHelper.php
 
 		-
-			message: "#^PHPDoc tag @var for variable \\$subArray has no value type specified in iterable type array\\.$#"
+			message: "#^Offset string on array\\(\\) in isset\\(\\) does not exist\\.$#"
 			count: 1
 			path: src/Collection/src/ArrayHelper.php
 
@@ -717,11 +718,6 @@ parameters:
 
 		-
 			message: "#^Method spaceonfire\\\\Criteria\\\\JsonApiCriteriaBuilder\\:\\:withAllowedOrderByFields\\(\\) has parameter \\$allowedOrderByFields with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/Criteria/src/JsonApiCriteriaBuilder.php
-
-		-
-			message: "#^Property spaceonfire\\\\Criteria\\\\JsonApiCriteriaBuilder\\:\\:\\$allowedOrderByFields type has no value type specified in iterable type array\\.$#"
 			count: 1
 			path: src/Criteria/src/JsonApiCriteriaBuilder.php
 

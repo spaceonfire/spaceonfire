@@ -77,9 +77,9 @@ class PaginableCriteriaTest extends AbstractCriteriaTest
     private function makeQuery(int $count)
     {
         return new class($count) implements PaginableInterface, \Countable {
-            public $limit = 0;
-            public $offset = 0;
-            public $count;
+            public int $limit = 0;
+            public int $offset = 0;
+            public int $count;
 
             public function __construct(int $count)
             {
