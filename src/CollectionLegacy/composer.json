@@ -1,12 +1,11 @@
 {
-  "name": "spaceonfire/type",
-  "description": "Collection of objects that provides ability of checking value types",
+  "name": "spaceonfire/collection-legacy",
   "type": "library",
+  "description": "Framework agnostic PHP collections",
   "keywords": [
-    "type",
-    "type-check"
+    "collection"
   ],
-  "homepage": "https://github.com/spaceonfire/type",
+  "homepage": "https://github.com/spaceonfire/collection-legacy",
   "license": "MIT",
   "authors": [
     {
@@ -18,20 +17,23 @@
   ],
   "require": {
     "php": "^7.4|^8.0",
+    "ext-json": "*",
+    "spaceonfire/criteria": "^3.0",
+    "spaceonfire/type": "^3.0",
+    "symfony/polyfill-php73": "^1.22",
     "webmozart/assert": "^1.6"
   },
   "require-dev": {
-    "ext-json": "*",
     "roave/security-advisories": "dev-latest"
   },
   "autoload": {
     "psr-4": {
-      "spaceonfire\\Type\\": "src"
+      "spaceonfire\\Collection\\Legacy\\": "src"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "spaceonfire\\Type\\": "tests"
+      "spaceonfire\\Collection\\Legacy\\": "tests"
     }
   },
   "extra": {
@@ -41,5 +43,7 @@
   },
   "config": {
     "sort-packages": true
-  }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }

@@ -1,7 +1,7 @@
 {
   "name": "spaceonfire/criteria",
-  "type": "library",
   "description": "Criteria help you to declare rules to filter datasets",
+  "type": "library",
   "keywords": [
     "criteria",
     "filter",
@@ -19,7 +19,7 @@
     }
   ],
   "require": {
-    "php": "^7.2|^8.0",
+    "php": "^7.4|^8.0",
     "symfony/property-access": "^4.4|^5.0",
     "webmozart/assert": "^1.6",
     "webmozart/expression": "^1.0"
@@ -44,7 +44,7 @@
   },
   "extra": {
     "branch-alias": {
-      "dev-master": "2.5-dev"
+      "dev-master": "3.0-dev"
     }
   },
   "config": {

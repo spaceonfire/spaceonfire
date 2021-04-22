@@ -22,27 +22,27 @@ $defaultComposerJson = [
         ],
     ],
     ComposerJsonSection::REQUIRE => [
-        'php' => '^7.2|^8.0',
+        'php' => '^7.4|^8.0',
     ],
     ComposerJsonSection::REQUIRE_DEV => [
         'roave/security-advisories' => 'dev-latest',
-        'phpunit/phpunit' => '^8.5|^9.5',
+        'phpunit/phpunit' => '^9.5',
         'phpspec/prophecy' => '^1.13',
-        'phpspec/prophecy-phpunit' => '^1.1|^2.0',
+        'phpspec/prophecy-phpunit' => '^2.0',
         'phpstan/phpstan' => '^0.12.84',
         'phpstan/phpstan-webmozart-assert' => '^0.12.12',
         'symplify/easy-coding-standard' => '^9.2',
-        'symplify/monorepo-builder' => '^8.3|^9.2',
+        'symplify/monorepo-builder' => '^9.2',
         'slevomat/coding-standard' => '^7.0',
     ],
     ComposerJsonSection::SCRIPTS => [
-        'test' => '@php -d xdebug.mode=coverage `which phpunit`',
         'codestyle' => '@php -d xdebug.mode=off `which ecs` check --ansi',
         'lint' => '@php -d xdebug.mode=off `which phpstan` analyze --memory-limit=512M --ansi',
+        'test' => '@php -d xdebug.mode=coverage `which phpunit`',
     ],
     ComposerJsonSection::EXTRA => [
         'branch-alias' => [
-            'dev-master' => '2.5-dev',
+            'dev-master' => '3.0-dev',
         ],
     ],
     ComposerJsonSection::MINIMUM_STABILITY => 'dev',
@@ -65,7 +65,7 @@ $defaultComposerJson = [
 
     $result = \array_merge($defaultComposerJson, $actualComposerJson);
 
-    $json = \json_encode($result, \JSON_PRETTY_PRINT | \JSON_UNESCAPED_SLASHES);
+    $json = \json_encode($result, \JSON_THROW_ON_ERROR | \JSON_PRETTY_PRINT | \JSON_UNESCAPED_SLASHES);
     $json = \str_replace('    ', '  ', $json);
 
     \file_put_contents(__DIR__ . '/composer.json', $json . "\n");

@@ -1,7 +1,7 @@
 {
   "name": "spaceonfire/command-bus",
-  "type": "library",
   "description": "Simple and extendable command bus",
+  "type": "library",
   "keywords": [
     "command-bus",
     "query-bus",
@@ -20,7 +20,7 @@
     }
   ],
   "require": {
-    "php": "^7.2|^8.0",
+    "php": "^7.4|^8.0",
     "psr/container": "^1.0",
     "webmozart/assert": "^1.6"
   },
@@ -45,7 +45,7 @@
   },
   "extra": {
     "branch-alias": {
-      "dev-master": "2.5-dev"
+      "dev-master": "3.0-dev"
     }
   },
   "config": {

@@ -1,7 +1,7 @@
 {
   "name": "spaceonfire/collection",
-  "type": "library",
   "description": "Framework agnostic PHP collections",
+  "type": "library",
   "keywords": [
     "collection"
   ],
@@ -16,11 +16,10 @@
     }
   ],
   "require": {
-    "php": "^7.2|^8.0",
+    "php": "^7.4|^8.0",
     "ext-json": "*",
-    "spaceonfire/criteria": "^2.5",
-    "spaceonfire/type": "^2.5",
-    "symfony/polyfill-php73": "^1.22",
+    "spaceonfire/criteria": "^3.0",
+    "spaceonfire/type": "^3.0",
     "webmozart/assert": "^1.6"
   },
   "require-dev": {
@@ -38,12 +37,12 @@
   },
   "extra": {
     "branch-alias": {
-      "dev-master": "2.5-dev"
+      "dev-master": "3.0-dev"
     }
   },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
   "config": {
     "sort-packages": true
-  },
-  "minimum-stability": "dev",
-  "prefer-stable": true
+  }
 }

@@ -1,7 +1,7 @@
 {
   "name": "spaceonfire/data-source",
-  "type": "library",
   "description": "Useful interfaces and abstracts to design your domain model",
+  "type": "library",
   "keywords": [
     "DDD",
     "domain",
@@ -21,13 +21,13 @@
     }
   ],
   "require": {
-    "php": "^7.2|^8.0",
+    "php": "^7.4|^8.0",
     "ext-json": "*",
     "guzzlehttp/psr7": "^1.6",
     "jawira/case-converter": "^3.4",
-    "spaceonfire/collection": "^2.5",
-    "spaceonfire/criteria": "^2.5",
-    "spaceonfire/laminas-hydrator-bridge": "^2.5",
+    "spaceonfire/collection": "^3.0",
+    "spaceonfire/criteria": "^3.0",
+    "spaceonfire/laminas-hydrator-bridge": "^3.0",
     "webmozart/assert": "^1.6"
   },
   "require-dev": {
@@ -36,7 +36,7 @@
     "nette/utils": "^3.0",
     "ramsey/uuid": "^3.9|^4.0",
     "roave/security-advisories": "dev-latest",
-    "spaceonfire/value-object": "^2.5",
+    "spaceonfire/value-object": "^3.0",
     "spiral/pagination": "^2.7"
   },
   "suggest": {
@@ -59,7 +59,7 @@
   },
   "extra": {
     "branch-alias": {
-      "dev-master": "2.5-dev"
+      "dev-master": "3.0-dev"
     }
   },
   "config": {

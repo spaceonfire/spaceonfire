@@ -1,7 +1,7 @@
 {
   "name": "spaceonfire/value-object",
-  "type": "library",
   "description": "Value Object library for PHP",
+  "type": "library",
   "keywords": [
     "value-object",
     "string",
@@ -23,11 +23,11 @@
     }
   ],
   "require": {
-    "php": "^7.2|^8.0",
+    "php": "^7.4|^8.0",
     "ext-json": "*",
     "guzzlehttp/psr7": "^1.6",
     "jawira/case-converter": "^3.4",
-    "spaceonfire/laminas-hydrator-bridge": "^2.5",
+    "spaceonfire/laminas-hydrator-bridge": "^3.0",
     "webmozart/assert": "^1.6"
   },
   "require-dev": {
@@ -50,7 +50,7 @@
   },
   "extra": {
     "branch-alias": {
-      "dev-master": "2.5-dev"
+      "dev-master": "3.0-dev"
     }
   },
   "config": {

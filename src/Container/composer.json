@@ -1,7 +1,7 @@
 {
   "name": "spaceonfire/container",
-  "type": "library",
   "description": "Small yet powerful implementation of PSR-11 compatible dependency injection container",
+  "type": "library",
   "keywords": [
     "container",
     "psr-11",
@@ -25,9 +25,9 @@
     }
   ],
   "require": {
-    "php": "^7.2|^8.0",
+    "php": "^7.4|^8.0",
     "psr/container": "^1.0",
-    "spaceonfire/collection": "^2.5"
+    "spaceonfire/collection": "^3.0"
   },
   "require-dev": {
     "roave/security-advisories": "dev-latest"
@@ -47,7 +47,7 @@
   },
   "extra": {
     "branch-alias": {
-      "dev-master": "2.5-dev"
+      "dev-master": "3.0-dev"
     }
   },
   "config": {
