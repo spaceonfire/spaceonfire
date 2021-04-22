@@ -61,11 +61,6 @@ parameters:
 			path: src/Collection/src/AbstractCollectionDecorator.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\AbstractCollectionDecorator\\:\\:merge\\(\\) has parameter \\$collections with no value type specified in iterable type iterable\\.$#"
-			count: 1
-			path: src/Collection/src/AbstractCollectionDecorator.php
-
-		-
 			message: "#^Method spaceonfire\\\\Collection\\\\AbstractCollectionDecorator\\:\\:merge\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
 			count: 1
 			path: src/Collection/src/AbstractCollectionDecorator.php
@@ -308,12 +303,7 @@ parameters:
 		-
 			message: "#^Method spaceonfire\\\\Collection\\\\Collection\\:\\:max\\(\\) has parameter \\$field with no value type specified in iterable type array\\.$#"
 			count: 1
-			path: src/Collection/src/Collection.php
-
-		-
-			message: "#^Method spaceonfire\\\\Collection\\\\Collection\\:\\:merge\\(\\) has parameter \\$collections with no value type specified in iterable type iterable\\.$#"
-			count: 1
-			path: src/Collection/src/Collection.php
+			path: src/CollectionLegacy/src/Collection.php
 
 		-
 			message: "#^Method spaceonfire\\\\Collection\\\\Collection\\:\\:merge\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
@@ -472,16 +462,6 @@ parameters:
 
 		-
 			message: "#^Method spaceonfire\\\\Collection\\\\CollectionInterface\\:\\:map\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
-			count: 1
-			path: src/Collection/src/CollectionInterface.php
-
-		-
-			message: "#^Method spaceonfire\\\\Collection\\\\CollectionInterface\\:\\:matching\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
-			count: 1
-			path: src/Collection/src/CollectionInterface.php
-
-		-
-			message: "#^Method spaceonfire\\\\Collection\\\\CollectionInterface\\:\\:merge\\(\\) has parameter \\$collections with no value type specified in iterable type iterable\\.$#"
 			count: 1
 			path: src/Collection/src/CollectionInterface.php
 
@@ -831,11 +811,6 @@ parameters:
 			path: src/DataSource/src/Bridge/CycleOrm/Query/CycleQuery.php
 
 		-
-			message: "#^Method spaceonfire\\\\DataSource\\\\Bridge\\\\CycleOrm\\\\Repository\\\\AbstractCycleRepository\\:\\:findAll\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
-			count: 1
-			path: src/DataSource/src/Bridge/CycleOrm/Repository/AbstractCycleRepository.php
-
-		-
 			message: "#^Method spaceonfire\\\\DataSource\\\\Bridge\\\\CycleOrm\\\\Repository\\\\AbstractCycleRepositoryAdapter\\:\\:findAll\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
 			count: 1
 			path: src/DataSource/src/Bridge/CycleOrm/Repository/AbstractCycleRepositoryAdapter.php
@@ -911,6 +886,11 @@ parameters:
 			path: src/LaminasHydratorBridge/src/Strategy/BooleanStrategy.php
 
 		-
+			message: "#^Method spaceonfire\\\\LaminasHydratorBridge\\\\Strategy\\\\DateValueStrategy\\:\\:hydrate\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/LaminasHydratorBridge/src/Strategy/DateValueStrategy.php
+
+		-
 			message: "#^Method spaceonfire\\\\LaminasHydratorBridge\\\\Strategy\\\\NullableStrategy\\:\\:hydrate\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
 			count: 1
 			path: src/LaminasHydratorBridge/src/Strategy/NullableStrategy.php
@@ -924,6 +904,11 @@ parameters:
 			message: "#^Method spaceonfire\\\\LaminasHydratorBridge\\\\Strategy\\\\ScalarStrategy\\:\\:hydrate\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
 			count: 1
 			path: src/LaminasHydratorBridge/src/Strategy/ScalarStrategy.php
+
+		-
+			message: "#^Method spaceonfire\\\\LaminasHydratorBridge\\\\Strategy\\\\ValueObjectStrategy\\:\\:hydrate\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/LaminasHydratorBridge/src/Strategy/ValueObjectStrategy.php
 
 		-
 			message: "#^Class spaceonfire\\\\Type\\\\AbstractAggregatedType implements generic interface IteratorAggregate but does not specify its types\\: TKey, TValue$#"
@@ -951,16 +936,6 @@ parameters:
 			path: src/Type/src/AbstractAggregatedType.php
 
 		-
-			message: "#^Method spaceonfire\\\\Type\\\\ConjunctionType\\:\\:create\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Type\\\\ConjunctionType\\.$#"
-			count: 1
-			path: src/Type/src/ConjunctionType.php
-
-		-
-			message: "#^Method spaceonfire\\\\Type\\\\DisjunctionType\\:\\:create\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Type\\\\DisjunctionType\\.$#"
-			count: 1
-			path: src/Type/src/DisjunctionType.php
-
-		-
 			message: "#^Method spaceonfire\\\\Type\\\\Factory\\\\AbstractAggregatedTypeFactory\\:\\:parse\\(\\) return type has no value type specified in iterable type array\\.$#"
 			count: 1
 			path: src/Type/src/Factory/AbstractAggregatedTypeFactory.php
@@ -979,16 +954,6 @@ parameters:
 			message: "#^Method spaceonfire\\\\Type\\\\Factory\\\\CompositeTypeFactory\\:\\:makeDefaultFactories\\(\\) return type has no value type specified in iterable type iterable\\.$#"
 			count: 1
 			path: src/Type/src/Factory/CompositeTypeFactory.php
-
-		-
-			message: "#^Method spaceonfire\\\\ValueObject\\\\Bridge\\\\LaminasHydrator\\\\DateValueStrategy\\:\\:hydrate\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/ValueObject/src/Bridge/LaminasHydrator/DateValueStrategy.php
-
-		-
-			message: "#^Method spaceonfire\\\\ValueObject\\\\Bridge\\\\LaminasHydrator\\\\ValueObjectStrategy\\:\\:hydrate\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/ValueObject/src/Bridge/LaminasHydrator/ValueObjectStrategy.php
 
 		-
 			message: "#^Method spaceonfire\\\\ValueObject\\\\EnumValue\\:\\:__callStatic\\(\\) has parameter \\$args with no value type specified in iterable type array\\.$#"

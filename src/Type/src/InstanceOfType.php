@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace spaceonfire\Type;
 
 use InvalidArgumentException;
-use spaceonfire\Type\Factory\InstanceOfTypeFactory;
 
 final class InstanceOfType implements TypeInterface
 {
@@ -41,27 +40,5 @@ final class InstanceOfType implements TypeInterface
     public function check($value): bool
     {
         return $value instanceof $this->className;
-    }
-
-    /**
-     * @param string $type
-     * @return bool
-     * @deprecated use dynamic type factory instead. This method will be removed in next major release.
-     * @see Factory\TypeFactoryInterface
-     */
-    public static function supports(string $type): bool
-    {
-        return (new InstanceOfTypeFactory())->supports($type);
-    }
-
-    /**
-     * @param string $type
-     * @return self
-     * @deprecated use dynamic type factory instead. This method will be removed in next major release.
-     * @see Factory\TypeFactoryInterface
-     */
-    public static function create(string $type): TypeInterface
-    {
-        return (new InstanceOfTypeFactory())->make($type);
     }
 }

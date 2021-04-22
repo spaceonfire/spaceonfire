@@ -17,7 +17,7 @@ use Webmozart\Expression\Expression;
 /**
  * Converts Expressions from Doctrine collections to webmozart expressions
  */
-class DoctrineCollectionsExpressionConverter extends ExpressionVisitor
+final class DoctrineCollectionsExpressionConverter extends ExpressionVisitor
 {
     /**
      * @var string

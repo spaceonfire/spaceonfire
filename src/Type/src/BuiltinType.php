@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace spaceonfire\Type;
 
 use InvalidArgumentException;
-use spaceonfire\Type\Factory\BuiltinTypeFactory;
 use Webmozart\Assert\Assert;
 
 final class BuiltinType implements TypeInterface
@@ -184,28 +183,5 @@ final class BuiltinType implements TypeInterface
             default:
                 return $value;
         }
-    }
-
-    /**
-     * @param string $type
-     * @return bool
-     * @deprecated use dynamic type factory instead. This method will be removed in next major release.
-     * @see Factory\TypeFactoryInterface
-     */
-    public static function supports(string $type): bool
-    {
-        return (new BuiltinTypeFactory())->supports($type);
-    }
-
-    /**
-     * @param string $type
-     * @param bool $strict
-     * @return self
-     * @deprecated use dynamic type factory instead. This method will be removed in next major release.
-     * @see Factory\TypeFactoryInterface
-     */
-    public static function create(string $type, bool $strict = true): TypeInterface
-    {
-        return (new BuiltinTypeFactory($strict))->make($type);
     }
 }

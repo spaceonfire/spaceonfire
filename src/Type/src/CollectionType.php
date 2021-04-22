@@ -4,8 +4,7 @@ declare(strict_types=1);
 
 namespace spaceonfire\Type;
 
-use spaceonfire\Type\Factory\CollectionTypeFactory;
-use spaceonfire\Type\Factory\CompositeTypeFactory;
+use Ramsey\Uuid\Type\TypeInterface;
 
 final class CollectionType implements TypeInterface
 {
@@ -76,31 +75,5 @@ final class CollectionType implements TypeInterface
         }
 
         return true;
-    }
-
-    /**
-     * @param string $type
-     * @return bool
-     * @deprecated use dynamic type factory instead. This method will be removed in next major release.
-     * @see Factory\TypeFactoryInterface
-     */
-    public static function supports(string $type): bool
-    {
-        $factory = new CollectionTypeFactory();
-        $factory->setParent(CompositeTypeFactory::makeWithDefaultFactories());
-        return $factory->supports($type);
-    }
-
-    /**
-     * @param string $type
-     * @return self
-     * @deprecated use dynamic type factory instead. This method will be removed in next major release.
-     * @see Factory\TypeFactoryInterface
-     */
-    public static function create(string $type): TypeInterface
-    {
-        $factory = new CollectionTypeFactory();
-        $factory->setParent(CompositeTypeFactory::makeWithDefaultFactories());
-        return $factory->make($type);
     }
 }

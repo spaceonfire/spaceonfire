@@ -8,7 +8,7 @@ use Doctrine\Common\Collections\Criteria as DoctrineCriteria;
 use spaceonfire\Criteria\Criteria;
 use spaceonfire\Criteria\CriteriaInterface;
 
-class DoctrineCollectionsCriteriaConverter
+final class DoctrineCollectionsCriteriaConverter
 {
     /**
      * Converts Doctrine criteria to spaceonfire criteria

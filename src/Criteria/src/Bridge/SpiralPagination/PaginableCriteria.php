@@ -11,7 +11,7 @@ use Spiral\Pagination\PaginableInterface;
 use Spiral\Pagination\Paginator;
 use Spiral\Pagination\PaginatorInterface;
 
-class PaginableCriteria extends AbstractCriteriaDecorator implements PaginableInterface, PaginatorInterface
+final class PaginableCriteria extends AbstractCriteriaDecorator implements PaginableInterface, PaginatorInterface
 {
     /**
      * @var PaginatorInterface|Paginator

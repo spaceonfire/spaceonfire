@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace spaceonfire\ValueObject\Bridge\LaminasHydrator;
+namespace spaceonfire\LaminasHydratorBridge\Strategy;
 
 use InvalidArgumentException;
 use Laminas\Hydrator\Strategy\StrategyInterface;

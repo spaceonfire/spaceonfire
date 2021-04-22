@@ -4,11 +4,7 @@ declare(strict_types=1);
 
 namespace spaceonfire\Container;
 
-/**
- * Class RawValueHolder.
- * @final
- */
-class RawValueHolder
+final class RawValueHolder
 {
     /**
      * @var mixed

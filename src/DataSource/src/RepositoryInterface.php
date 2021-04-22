@@ -7,12 +7,6 @@ namespace spaceonfire\DataSource;
 use spaceonfire\Collection\CollectionInterface;
 use spaceonfire\Criteria\CriteriaInterface;
 
-/**
- * Interface RepositoryInterface.
- *
- * @method object|EntityInterface getById($id)
- * @method CollectionInterface getList($criteria)
- */
 interface RepositoryInterface
 {
     /**

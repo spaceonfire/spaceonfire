@@ -7,7 +7,6 @@ namespace spaceonfire\DataSource\Fixtures\Infrastructure\Persistence\Post;
 use spaceonfire\Collection\Collection;
 use spaceonfire\Collection\CollectionInterface;
 use spaceonfire\Criteria\CriteriaInterface;
-use spaceonfire\DataSource\EntityInterface;
 use spaceonfire\DataSource\Fixtures\Domain\Post\Exceptions\PostNotFoundException;
 use spaceonfire\DataSource\Fixtures\Domain\Post\Post;
 use spaceonfire\DataSource\Fixtures\Domain\Post\PostRepositoryInterface;
@@ -99,27 +98,5 @@ class InMemoryPostRepository implements PostRepositoryInterface
     public function getMapper(): MapperInterface
     {
         return $this->mapper;
-    }
-
-    /**
-     * @param mixed $id
-     * @return mixed|EntityInterface
-     * @deprecated
-     * @codeCoverageIgnore
-     */
-    public function getById($id)
-    {
-        return $this->findByPrimary($id);
-    }
-
-    /**
-     * @param mixed $criteria
-     * @return CollectionInterface|Post[]
-     * @deprecated
-     * @codeCoverageIgnore
-     */
-    public function getList($criteria)
-    {
-        return $this->findAll($criteria);
     }
 }

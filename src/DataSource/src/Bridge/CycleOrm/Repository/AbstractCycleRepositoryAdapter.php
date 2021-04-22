@@ -160,28 +160,6 @@ abstract class AbstractCycleRepositoryAdapter implements RepositoryInterface
     }
 
     /**
-     * @param mixed $id
-     * @return mixed|EntityInterface
-     * @deprecated
-     * @codeCoverageIgnore
-     */
-    public function getById($id)
-    {
-        return $this->findByPrimary($id);
-    }
-
-    /**
-     * @param mixed $criteria
-     * @return CollectionInterface|EntityInterface[]|mixed[]
-     * @deprecated
-     * @codeCoverageIgnore
-     */
-    public function getList($criteria)
-    {
-        return $this->findAll($criteria);
-    }
-
-    /**
      * @inheritDoc
      */
     public function getMapper(): MapperInterface

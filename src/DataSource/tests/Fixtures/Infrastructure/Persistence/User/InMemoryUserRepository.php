@@ -7,7 +7,6 @@ namespace spaceonfire\DataSource\Fixtures\Infrastructure\Persistence\User;
 use spaceonfire\Collection\Collection;
 use spaceonfire\Collection\CollectionInterface;
 use spaceonfire\Criteria\CriteriaInterface;
-use spaceonfire\DataSource\EntityInterface;
 use spaceonfire\DataSource\Fixtures\Domain\User\Exceptions\UserNotFoundException;
 use spaceonfire\DataSource\Fixtures\Domain\User\User;
 use spaceonfire\DataSource\Fixtures\Domain\User\UserRepositoryInterface;
@@ -102,27 +101,5 @@ class InMemoryUserRepository implements UserRepositoryInterface
     public function count(?CriteriaInterface $criteria = null): int
     {
         return count($this->findAll($criteria));
-    }
-
-    /**
-     * @param mixed $id
-     * @return mixed|EntityInterface
-     * @deprecated
-     * @codeCoverageIgnore
-     */
-    public function getById($id)
-    {
-        return $this->findByPrimary($id);
-    }
-
-    /**
-     * @param mixed $criteria
-     * @return CollectionInterface|User[]
-     * @deprecated
-     * @codeCoverageIgnore
-     */
-    public function getList($criteria)
-    {
-        return $this->findAll($criteria);
     }
 }

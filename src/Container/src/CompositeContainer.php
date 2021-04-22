@@ -15,15 +15,7 @@ use spaceonfire\Container\Exception\ContainerException;
 use spaceonfire\Container\Exception\NotFoundException;
 use Traversable;
 
-/**
- * Class CompositeContainer
- *
- * Attention: You should not extend this class because it will become final in the next major release
- * after the backward compatibility aliases are removed.
- *
- * @final
- */
-class CompositeContainer implements ContainerWithServiceProvidersInterface, ContainerAwareInterface, IteratorAggregate
+final class CompositeContainer implements ContainerWithServiceProvidersInterface, ContainerAwareInterface, IteratorAggregate
 {
     use ContainerAwareTrait;
 

@@ -16,18 +16,6 @@ abstract class IntValue extends BaseValueObject
     }
 
     /**
-     * Checks that current VO equals to provided one.
-     * @param IntValue $other
-     * @return bool
-     * @deprecated replaced with equals() method on base value object class
-     * @codeCoverageIgnore
-     */
-    public function equalsTo(self $other): bool
-    {
-        return $this->equals($other);
-    }
-
-    /**
      * Checks that current VO is bigger than provided one.
      * @param IntValue $other
      * @return bool
