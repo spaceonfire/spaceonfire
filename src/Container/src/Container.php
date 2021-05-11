@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace spaceonfire\Container;
 
 use InvalidArgumentException;
-use spaceonfire\Collection\CollectionInterface;
+use spaceonfire\Collection\Legacy\CollectionInterface;
 use spaceonfire\Container\Argument\ArgumentResolver;
 use spaceonfire\Container\Definition\DefinitionAggregate;
 use spaceonfire\Container\Definition\DefinitionAggregateInterface;

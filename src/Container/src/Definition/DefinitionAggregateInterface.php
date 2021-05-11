@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace spaceonfire\Container\Definition;
 
 use IteratorAggregate;
-use spaceonfire\Collection\CollectionInterface;
+use spaceonfire\Collection\Legacy\CollectionInterface;
 use spaceonfire\Container\ContainerInterface;
 
 interface DefinitionAggregateInterface extends IteratorAggregate

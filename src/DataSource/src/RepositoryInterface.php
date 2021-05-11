@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace spaceonfire\DataSource;
 
-use spaceonfire\Collection\CollectionInterface;
+use spaceonfire\Collection\Legacy\CollectionInterface;
 use spaceonfire\Criteria\CriteriaInterface;
 
 interface RepositoryInterface

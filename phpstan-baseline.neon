@@ -1,605 +1,615 @@
 parameters:
 	ignoreErrors:
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\AbstractCollectionDecorator\\:\\:all\\(\\) return type has no value type specified in iterable type array\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\AbstractCollectionDecorator\\:\\:all\\(\\) return type has no value type specified in iterable type array\\.$#"
 			count: 1
-			path: src/Collection/src/AbstractCollectionDecorator.php
+			path: src/CollectionLegacy/src/AbstractCollectionDecorator.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\AbstractCollectionDecorator\\:\\:clear\\(\\) return type has no value type specified in iterable type \\$this\\(spaceonfire\\\\Collection\\\\AbstractCollectionDecorator\\)\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\AbstractCollectionDecorator\\:\\:clear\\(\\) return type has no value type specified in iterable type \\$this\\(spaceonfire\\\\Collection\\\\Legacy\\\\AbstractCollectionDecorator\\)\\.$#"
 			count: 1
-			path: src/Collection/src/AbstractCollectionDecorator.php
+			path: src/CollectionLegacy/src/AbstractCollectionDecorator.php
 
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\AbstractCollectionDecorator\\:\\:downgrade\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\AbstractCollectionDecorator\\:\\:downgrade\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/AbstractCollectionDecorator.php
+			path: src/CollectionLegacy/src/AbstractCollectionDecorator.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\AbstractCollectionDecorator\\:\\:each\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\AbstractCollectionDecorator\\:\\:each\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/AbstractCollectionDecorator.php
+			path: src/CollectionLegacy/src/AbstractCollectionDecorator.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\AbstractCollectionDecorator\\:\\:filter\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\AbstractCollectionDecorator\\:\\:filter\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/AbstractCollectionDecorator.php
+			path: src/CollectionLegacy/src/AbstractCollectionDecorator.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\AbstractCollectionDecorator\\:\\:flip\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\AbstractCollectionDecorator\\:\\:flip\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/AbstractCollectionDecorator.php
+			path: src/CollectionLegacy/src/AbstractCollectionDecorator.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\AbstractCollectionDecorator\\:\\:getIterator\\(\\) return type has no value type specified in iterable type Traversable\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\AbstractCollectionDecorator\\:\\:getIterator\\(\\) return type has no value type specified in iterable type Traversable\\.$#"
 			count: 1
-			path: src/Collection/src/AbstractCollectionDecorator.php
+			path: src/CollectionLegacy/src/AbstractCollectionDecorator.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\AbstractCollectionDecorator\\:\\:groupBy\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\AbstractCollectionDecorator\\:\\:groupBy\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/AbstractCollectionDecorator.php
+			path: src/CollectionLegacy/src/AbstractCollectionDecorator.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\AbstractCollectionDecorator\\:\\:indexBy\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\AbstractCollectionDecorator\\:\\:indexBy\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/AbstractCollectionDecorator.php
+			path: src/CollectionLegacy/src/AbstractCollectionDecorator.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\AbstractCollectionDecorator\\:\\:keys\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\AbstractCollectionDecorator\\:\\:keys\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/AbstractCollectionDecorator.php
+			path: src/CollectionLegacy/src/AbstractCollectionDecorator.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\AbstractCollectionDecorator\\:\\:map\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\AbstractCollectionDecorator\\:\\:map\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/AbstractCollectionDecorator.php
+			path: src/CollectionLegacy/src/AbstractCollectionDecorator.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\AbstractCollectionDecorator\\:\\:matching\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\AbstractCollectionDecorator\\:\\:matching\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/AbstractCollectionDecorator.php
+			path: src/CollectionLegacy/src/AbstractCollectionDecorator.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\AbstractCollectionDecorator\\:\\:merge\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\AbstractCollectionDecorator\\:\\:merge\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/AbstractCollectionDecorator.php
+			path: src/CollectionLegacy/src/AbstractCollectionDecorator.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\AbstractCollectionDecorator\\:\\:newStatic\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\AbstractCollectionDecorator\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\AbstractCollectionDecorator\\:\\:newStatic\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\AbstractCollectionDecorator\\.$#"
 			count: 1
-			path: src/Collection/src/AbstractCollectionDecorator.php
+			path: src/CollectionLegacy/src/AbstractCollectionDecorator.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\AbstractCollectionDecorator\\:\\:remap\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\AbstractCollectionDecorator\\:\\:remap\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/AbstractCollectionDecorator.php
+			path: src/CollectionLegacy/src/AbstractCollectionDecorator.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\AbstractCollectionDecorator\\:\\:remove\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\AbstractCollectionDecorator\\:\\:remove\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/AbstractCollectionDecorator.php
+			path: src/CollectionLegacy/src/AbstractCollectionDecorator.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\AbstractCollectionDecorator\\:\\:replace\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\AbstractCollectionDecorator\\:\\:replace\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/AbstractCollectionDecorator.php
+			path: src/CollectionLegacy/src/AbstractCollectionDecorator.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\AbstractCollectionDecorator\\:\\:reverse\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\AbstractCollectionDecorator\\:\\:reverse\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/AbstractCollectionDecorator.php
+			path: src/CollectionLegacy/src/AbstractCollectionDecorator.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\AbstractCollectionDecorator\\:\\:slice\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\AbstractCollectionDecorator\\:\\:slice\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/AbstractCollectionDecorator.php
+			path: src/CollectionLegacy/src/AbstractCollectionDecorator.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\AbstractCollectionDecorator\\:\\:sort\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\AbstractCollectionDecorator\\:\\:sort\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/AbstractCollectionDecorator.php
+			path: src/CollectionLegacy/src/AbstractCollectionDecorator.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\AbstractCollectionDecorator\\:\\:sortBy\\(\\) has parameter \\$direction with no value type specified in iterable type array\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\AbstractCollectionDecorator\\:\\:sortBy\\(\\) has parameter \\$direction with no value type specified in iterable type array\\.$#"
 			count: 1
-			path: src/Collection/src/AbstractCollectionDecorator.php
+			path: src/CollectionLegacy/src/AbstractCollectionDecorator.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\AbstractCollectionDecorator\\:\\:sortBy\\(\\) has parameter \\$key with no value type specified in iterable type array\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\AbstractCollectionDecorator\\:\\:sortBy\\(\\) has parameter \\$key with no value type specified in iterable type array\\.$#"
 			count: 1
-			path: src/Collection/src/AbstractCollectionDecorator.php
+			path: src/CollectionLegacy/src/AbstractCollectionDecorator.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\AbstractCollectionDecorator\\:\\:sortBy\\(\\) has parameter \\$sortFlag with no value type specified in iterable type array\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\AbstractCollectionDecorator\\:\\:sortBy\\(\\) has parameter \\$sortFlag with no value type specified in iterable type array\\.$#"
 			count: 1
-			path: src/Collection/src/AbstractCollectionDecorator.php
+			path: src/CollectionLegacy/src/AbstractCollectionDecorator.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\AbstractCollectionDecorator\\:\\:sortBy\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\AbstractCollectionDecorator\\:\\:sortBy\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/AbstractCollectionDecorator.php
+			path: src/CollectionLegacy/src/AbstractCollectionDecorator.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\AbstractCollectionDecorator\\:\\:sortByKey\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\AbstractCollectionDecorator\\:\\:sortByKey\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/AbstractCollectionDecorator.php
+			path: src/CollectionLegacy/src/AbstractCollectionDecorator.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\AbstractCollectionDecorator\\:\\:sortNatural\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\AbstractCollectionDecorator\\:\\:sortNatural\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/AbstractCollectionDecorator.php
+			path: src/CollectionLegacy/src/AbstractCollectionDecorator.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\AbstractCollectionDecorator\\:\\:unique\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\AbstractCollectionDecorator\\:\\:unique\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/AbstractCollectionDecorator.php
+			path: src/CollectionLegacy/src/AbstractCollectionDecorator.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\AbstractCollectionDecorator\\:\\:values\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\AbstractCollectionDecorator\\:\\:values\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/AbstractCollectionDecorator.php
+			path: src/CollectionLegacy/src/AbstractCollectionDecorator.php
 
 		-
-			message: "#^Property spaceonfire\\\\Collection\\\\AbstractCollectionDecorator\\:\\:\\$collection type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Property spaceonfire\\\\Collection\\\\Legacy\\\\AbstractCollectionDecorator\\:\\:\\$collection type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/AbstractCollectionDecorator.php
+			path: src/CollectionLegacy/src/AbstractCollectionDecorator.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\ArrayHelper\\:\\:flatten\\(\\) has parameter \\$array with no value type specified in iterable type array\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\ArrayHelper\\:\\:flatten\\(\\) has parameter \\$array with no value type specified in iterable type array\\.$#"
 			count: 1
-			path: src/Collection/src/ArrayHelper.php
+			path: src/CollectionLegacy/src/ArrayHelper.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\ArrayHelper\\:\\:flatten\\(\\) return type has no value type specified in iterable type array\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\ArrayHelper\\:\\:flatten\\(\\) return type has no value type specified in iterable type array\\.$#"
 			count: 1
-			path: src/Collection/src/ArrayHelper.php
+			path: src/CollectionLegacy/src/ArrayHelper.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\ArrayHelper\\:\\:getColumn\\(\\) has parameter \\$array with no value type specified in iterable type array\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\ArrayHelper\\:\\:getColumn\\(\\) has parameter \\$array with no value type specified in iterable type array\\.$#"
 			count: 1
-			path: src/Collection/src/ArrayHelper.php
+			path: src/CollectionLegacy/src/ArrayHelper.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\ArrayHelper\\:\\:getColumn\\(\\) return type has no value type specified in iterable type array\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\ArrayHelper\\:\\:getColumn\\(\\) return type has no value type specified in iterable type array\\.$#"
 			count: 1
-			path: src/Collection/src/ArrayHelper.php
+			path: src/CollectionLegacy/src/ArrayHelper.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\ArrayHelper\\:\\:getValue\\(\\) has parameter \\$array with no value type specified in iterable type array\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\ArrayHelper\\:\\:getValue\\(\\) has parameter \\$array with no value type specified in iterable type array\\.$#"
 			count: 1
-			path: src/Collection/src/ArrayHelper.php
+			path: src/CollectionLegacy/src/ArrayHelper.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\ArrayHelper\\:\\:getValue\\(\\) has parameter \\$key with no value type specified in iterable type array\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\ArrayHelper\\:\\:getValue\\(\\) has parameter \\$key with no value type specified in iterable type array\\.$#"
 			count: 1
-			path: src/Collection/src/ArrayHelper.php
+			path: src/CollectionLegacy/src/ArrayHelper.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\ArrayHelper\\:\\:map\\(\\) has parameter \\$array with no value type specified in iterable type array\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\ArrayHelper\\:\\:map\\(\\) has parameter \\$array with no value type specified in iterable type array\\.$#"
 			count: 1
-			path: src/Collection/src/ArrayHelper.php
+			path: src/CollectionLegacy/src/ArrayHelper.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\ArrayHelper\\:\\:map\\(\\) return type has no value type specified in iterable type array\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\ArrayHelper\\:\\:map\\(\\) return type has no value type specified in iterable type array\\.$#"
 			count: 1
-			path: src/Collection/src/ArrayHelper.php
+			path: src/CollectionLegacy/src/ArrayHelper.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\ArrayHelper\\:\\:merge\\(\\) has parameter \\$arrays with no value type specified in iterable type array\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\ArrayHelper\\:\\:merge\\(\\) has parameter \\$arrays with no value type specified in iterable type array\\.$#"
 			count: 1
-			path: src/Collection/src/ArrayHelper.php
+			path: src/CollectionLegacy/src/ArrayHelper.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\ArrayHelper\\:\\:merge\\(\\) return type has no value type specified in iterable type array\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\ArrayHelper\\:\\:merge\\(\\) return type has no value type specified in iterable type array\\.$#"
 			count: 1
-			path: src/Collection/src/ArrayHelper.php
+			path: src/CollectionLegacy/src/ArrayHelper.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\ArrayHelper\\:\\:multisort\\(\\) has parameter \\$array with no value type specified in iterable type array\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\ArrayHelper\\:\\:multisort\\(\\) has parameter \\$array with no value type specified in iterable type array\\.$#"
 			count: 1
-			path: src/Collection/src/ArrayHelper.php
+			path: src/CollectionLegacy/src/ArrayHelper.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\ArrayHelper\\:\\:multisort\\(\\) has parameter \\$direction with no value type specified in iterable type array\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\ArrayHelper\\:\\:multisort\\(\\) has parameter \\$direction with no value type specified in iterable type array\\.$#"
 			count: 1
-			path: src/Collection/src/ArrayHelper.php
+			path: src/CollectionLegacy/src/ArrayHelper.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\ArrayHelper\\:\\:multisort\\(\\) has parameter \\$sortFlag with no value type specified in iterable type array\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\ArrayHelper\\:\\:multisort\\(\\) has parameter \\$sortFlag with no value type specified in iterable type array\\.$#"
 			count: 1
-			path: src/Collection/src/ArrayHelper.php
+			path: src/CollectionLegacy/src/ArrayHelper.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\ArrayHelper\\:\\:setValue\\(\\) has parameter \\$array with no value type specified in iterable type array\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\ArrayHelper\\:\\:setValue\\(\\) has parameter \\$array with no value type specified in iterable type array\\.$#"
 			count: 1
-			path: src/Collection/src/ArrayHelper.php
+			path: src/CollectionLegacy/src/ArrayHelper.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\ArrayHelper\\:\\:setValue\\(\\) has parameter \\$path with no value type specified in iterable type array\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\ArrayHelper\\:\\:setValue\\(\\) has parameter \\$path with no value type specified in iterable type array\\.$#"
 			count: 1
-			path: src/Collection/src/ArrayHelper.php
+			path: src/CollectionLegacy/src/ArrayHelper.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\ArrayHelper\\:\\:unflatten\\(\\) has parameter \\$array with no value type specified in iterable type array\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\ArrayHelper\\:\\:unflatten\\(\\) has parameter \\$array with no value type specified in iterable type array\\.$#"
 			count: 1
-			path: src/Collection/src/ArrayHelper.php
+			path: src/CollectionLegacy/src/ArrayHelper.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\ArrayHelper\\:\\:unflatten\\(\\) return type has no value type specified in iterable type array\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\ArrayHelper\\:\\:unflatten\\(\\) return type has no value type specified in iterable type array\\.$#"
 			count: 1
-			path: src/Collection/src/ArrayHelper.php
+			path: src/CollectionLegacy/src/ArrayHelper.php
 
 		-
 			message: "#^PHPDoc tag @var for variable \\$ret has no value type specified in iterable type array\\.$#"
 			count: 1
-			path: src/Collection/src/ArrayHelper.php
+			path: src/CollectionLegacy/src/ArrayHelper.php
 
 		-
 			message: "#^Offset string on array\\(\\) in isset\\(\\) does not exist\\.$#"
 			count: 1
-			path: src/Collection/src/ArrayHelper.php
+			path: src/CollectionLegacy/src/ArrayHelper.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\Collection\\:\\:all\\(\\) return type has no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/Collection/src/Collection.php
-
-		-
-			message: "#^Method spaceonfire\\\\Collection\\\\Collection\\:\\:clear\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Collection\\.$#"
-			count: 1
-			path: src/Collection/src/Collection.php
-
-		-
-			message: "#^Method spaceonfire\\\\Collection\\\\Collection\\:\\:each\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
-			count: 1
-			path: src/Collection/src/Collection.php
-
-		-
-			message: "#^Method spaceonfire\\\\Collection\\\\Collection\\:\\:filter\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
-			count: 1
-			path: src/Collection/src/Collection.php
-
-		-
-			message: "#^Method spaceonfire\\\\Collection\\\\Collection\\:\\:flip\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
-			count: 1
-			path: src/Collection/src/Collection.php
-
-		-
-			message: "#^Method spaceonfire\\\\Collection\\\\Collection\\:\\:getItems\\(\\) return type has no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/Collection/src/Collection.php
-
-		-
-			message: "#^Method spaceonfire\\\\Collection\\\\Collection\\:\\:getIterator\\(\\) return type has no value type specified in iterable type Traversable\\.$#"
-			count: 1
-			path: src/Collection/src/Collection.php
-
-		-
-			message: "#^Method spaceonfire\\\\Collection\\\\Collection\\:\\:groupBy\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
-			count: 1
-			path: src/Collection/src/Collection.php
-
-		-
-			message: "#^Method spaceonfire\\\\Collection\\\\Collection\\:\\:indexBy\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
-			count: 1
-			path: src/Collection/src/Collection.php
-
-		-
-			message: "#^Method spaceonfire\\\\Collection\\\\Collection\\:\\:keys\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
-			count: 1
-			path: src/Collection/src/Collection.php
-
-		-
-			message: "#^Method spaceonfire\\\\Collection\\\\Collection\\:\\:map\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
-			count: 1
-			path: src/Collection/src/Collection.php
-
-		-
-			message: "#^Method spaceonfire\\\\Collection\\\\Collection\\:\\:matching\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
-			count: 1
-			path: src/Collection/src/Collection.php
-
-		-
-			message: "#^Method spaceonfire\\\\Collection\\\\Collection\\:\\:max\\(\\) has parameter \\$field with no value type specified in iterable type array\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\Collection\\:\\:all\\(\\) return type has no value type specified in iterable type array\\.$#"
 			count: 1
 			path: src/CollectionLegacy/src/Collection.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\Collection\\:\\:merge\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\Collection\\:\\:clear\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\Collection\\.$#"
 			count: 1
-			path: src/Collection/src/Collection.php
+			path: src/CollectionLegacy/src/Collection.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\Collection\\:\\:min\\(\\) has parameter \\$field with no value type specified in iterable type array\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\Collection\\:\\:each\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/Collection.php
+			path: src/CollectionLegacy/src/Collection.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\Collection\\:\\:newStatic\\(\\) has parameter \\$items with no value type specified in iterable type array\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\Collection\\:\\:filter\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/Collection.php
+			path: src/CollectionLegacy/src/Collection.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\Collection\\:\\:newStatic\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Collection\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\Collection\\:\\:flip\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/Collection.php
+			path: src/CollectionLegacy/src/Collection.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\Collection\\:\\:remap\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\Collection\\:\\:getItems\\(\\) return type has no value type specified in iterable type array\\.$#"
 			count: 1
-			path: src/Collection/src/Collection.php
+			path: src/CollectionLegacy/src/Collection.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\Collection\\:\\:remove\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\Collection\\:\\:getIterator\\(\\) return type has no value type specified in iterable type Traversable\\.$#"
 			count: 1
-			path: src/Collection/src/Collection.php
+			path: src/CollectionLegacy/src/Collection.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\Collection\\:\\:replace\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\Collection\\:\\:groupBy\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/Collection.php
+			path: src/CollectionLegacy/src/Collection.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\Collection\\:\\:reverse\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\Collection\\:\\:indexBy\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/Collection.php
+			path: src/CollectionLegacy/src/Collection.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\Collection\\:\\:slice\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\Collection\\:\\:keys\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/Collection.php
+			path: src/CollectionLegacy/src/Collection.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\Collection\\:\\:sort\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\Collection\\:\\:map\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/Collection.php
+			path: src/CollectionLegacy/src/Collection.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\Collection\\:\\:sortBy\\(\\) has parameter \\$direction with no value type specified in iterable type array\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\Collection\\:\\:matching\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/Collection.php
+			path: src/CollectionLegacy/src/Collection.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\Collection\\:\\:sortBy\\(\\) has parameter \\$key with no value type specified in iterable type array\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\Collection\\:\\:max\\(\\) has parameter \\$field with no value type specified in iterable type array\\.$#"
 			count: 1
-			path: src/Collection/src/Collection.php
+			path: src/CollectionLegacy/src/Collection.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\Collection\\:\\:sortBy\\(\\) has parameter \\$sortFlag with no value type specified in iterable type array\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\Collection\\:\\:merge\\(\\) has parameter \\$collections with no value type specified in iterable type iterable\\.$#"
 			count: 1
-			path: src/Collection/src/Collection.php
+			path: src/CollectionLegacy/src/Collection.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\Collection\\:\\:sortBy\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\Collection\\:\\:merge\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/Collection.php
+			path: src/CollectionLegacy/src/Collection.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\Collection\\:\\:sortByKey\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\Collection\\:\\:min\\(\\) has parameter \\$field with no value type specified in iterable type array\\.$#"
 			count: 1
-			path: src/Collection/src/Collection.php
+			path: src/CollectionLegacy/src/Collection.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\Collection\\:\\:sortNatural\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\Collection\\:\\:newStatic\\(\\) has parameter \\$items with no value type specified in iterable type array\\.$#"
 			count: 1
-			path: src/Collection/src/Collection.php
+			path: src/CollectionLegacy/src/Collection.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\Collection\\:\\:sum\\(\\) has parameter \\$field with no value type specified in iterable type array\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\Collection\\:\\:newStatic\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\Collection\\.$#"
 			count: 1
-			path: src/Collection/src/Collection.php
+			path: src/CollectionLegacy/src/Collection.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\Collection\\:\\:unique\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\Collection\\:\\:remap\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/Collection.php
+			path: src/CollectionLegacy/src/Collection.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\Collection\\:\\:values\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\Collection\\:\\:remove\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/Collection.php
+			path: src/CollectionLegacy/src/Collection.php
 
 		-
-			message: "#^Property spaceonfire\\\\Collection\\\\Collection\\:\\:\\$items type has no value type specified in iterable type array\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\Collection\\:\\:replace\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/Collection.php
+			path: src/CollectionLegacy/src/Collection.php
 
 		-
-			message: "#^Interface spaceonfire\\\\Collection\\\\CollectionInterface extends generic interface ArrayAccess but does not specify its types\\: TKey, TValue$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\Collection\\:\\:reverse\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/CollectionInterface.php
+			path: src/CollectionLegacy/src/Collection.php
 
 		-
-			message: "#^Interface spaceonfire\\\\Collection\\\\CollectionInterface extends generic interface IteratorAggregate but does not specify its types\\: TKey, TValue$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\Collection\\:\\:slice\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/CollectionInterface.php
+			path: src/CollectionLegacy/src/Collection.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\CollectionInterface\\:\\:all\\(\\) return type has no value type specified in iterable type array\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\Collection\\:\\:sort\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/CollectionInterface.php
+			path: src/CollectionLegacy/src/Collection.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\CollectionInterface\\:\\:clear\\(\\) return type has no value type specified in iterable type \\$this\\(spaceonfire\\\\Collection\\\\CollectionInterface\\)\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\Collection\\:\\:sortBy\\(\\) has parameter \\$direction with no value type specified in iterable type array\\.$#"
 			count: 1
-			path: src/Collection/src/CollectionInterface.php
+			path: src/CollectionLegacy/src/Collection.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\CollectionInterface\\:\\:each\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\Collection\\:\\:sortBy\\(\\) has parameter \\$key with no value type specified in iterable type array\\.$#"
 			count: 1
-			path: src/Collection/src/CollectionInterface.php
+			path: src/CollectionLegacy/src/Collection.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\CollectionInterface\\:\\:filter\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\Collection\\:\\:sortBy\\(\\) has parameter \\$sortFlag with no value type specified in iterable type array\\.$#"
 			count: 1
-			path: src/Collection/src/CollectionInterface.php
+			path: src/CollectionLegacy/src/Collection.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\CollectionInterface\\:\\:flip\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\Collection\\:\\:sortBy\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/CollectionInterface.php
+			path: src/CollectionLegacy/src/Collection.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\CollectionInterface\\:\\:getIterator\\(\\) return type has no value type specified in iterable type Traversable\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\Collection\\:\\:sortByKey\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/CollectionInterface.php
+			path: src/CollectionLegacy/src/Collection.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\CollectionInterface\\:\\:groupBy\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\Collection\\:\\:sortNatural\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/CollectionInterface.php
+			path: src/CollectionLegacy/src/Collection.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\CollectionInterface\\:\\:indexBy\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\Collection\\:\\:sum\\(\\) has parameter \\$field with no value type specified in iterable type array\\.$#"
 			count: 1
-			path: src/Collection/src/CollectionInterface.php
+			path: src/CollectionLegacy/src/Collection.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\CollectionInterface\\:\\:keys\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\Collection\\:\\:unique\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/CollectionInterface.php
+			path: src/CollectionLegacy/src/Collection.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\CollectionInterface\\:\\:map\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\Collection\\:\\:values\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/CollectionInterface.php
+			path: src/CollectionLegacy/src/Collection.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\CollectionInterface\\:\\:merge\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Property spaceonfire\\\\Collection\\\\Legacy\\\\Collection\\:\\:\\$items type has no value type specified in iterable type array\\.$#"
 			count: 1
-			path: src/Collection/src/CollectionInterface.php
+			path: src/CollectionLegacy/src/Collection.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\CollectionInterface\\:\\:remap\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Interface spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface extends generic interface ArrayAccess but does not specify its types\\: TKey, TValue$#"
 			count: 1
-			path: src/Collection/src/CollectionInterface.php
+			path: src/CollectionLegacy/src/CollectionInterface.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\CollectionInterface\\:\\:remove\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Interface spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface extends generic interface IteratorAggregate but does not specify its types\\: TKey, TValue$#"
 			count: 1
-			path: src/Collection/src/CollectionInterface.php
+			path: src/CollectionLegacy/src/CollectionInterface.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\CollectionInterface\\:\\:replace\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\:\\:all\\(\\) return type has no value type specified in iterable type array\\.$#"
 			count: 1
-			path: src/Collection/src/CollectionInterface.php
+			path: src/CollectionLegacy/src/CollectionInterface.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\CollectionInterface\\:\\:reverse\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\:\\:clear\\(\\) return type has no value type specified in iterable type \\$this\\(spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\)\\.$#"
 			count: 1
-			path: src/Collection/src/CollectionInterface.php
+			path: src/CollectionLegacy/src/CollectionInterface.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\CollectionInterface\\:\\:slice\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\:\\:each\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/CollectionInterface.php
+			path: src/CollectionLegacy/src/CollectionInterface.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\CollectionInterface\\:\\:sort\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\:\\:filter\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/CollectionInterface.php
+			path: src/CollectionLegacy/src/CollectionInterface.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\CollectionInterface\\:\\:sortBy\\(\\) has parameter \\$direction with no value type specified in iterable type array\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\:\\:flip\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/CollectionInterface.php
+			path: src/CollectionLegacy/src/CollectionInterface.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\CollectionInterface\\:\\:sortBy\\(\\) has parameter \\$key with no value type specified in iterable type array\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\:\\:getIterator\\(\\) return type has no value type specified in iterable type Traversable\\.$#"
 			count: 1
-			path: src/Collection/src/CollectionInterface.php
+			path: src/CollectionLegacy/src/CollectionInterface.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\CollectionInterface\\:\\:sortBy\\(\\) has parameter \\$sortFlag with no value type specified in iterable type array\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\:\\:groupBy\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/CollectionInterface.php
+			path: src/CollectionLegacy/src/CollectionInterface.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\CollectionInterface\\:\\:sortBy\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\:\\:indexBy\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/CollectionInterface.php
+			path: src/CollectionLegacy/src/CollectionInterface.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\CollectionInterface\\:\\:sortByKey\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\:\\:keys\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/CollectionInterface.php
+			path: src/CollectionLegacy/src/CollectionInterface.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\CollectionInterface\\:\\:sortNatural\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\:\\:map\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/CollectionInterface.php
+			path: src/CollectionLegacy/src/CollectionInterface.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\CollectionInterface\\:\\:unique\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\:\\:matching\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/CollectionInterface.php
+			path: src/CollectionLegacy/src/CollectionInterface.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\CollectionInterface\\:\\:values\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\:\\:merge\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/CollectionInterface.php
+			path: src/CollectionLegacy/src/CollectionInterface.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\IndexedCollection\\:\\:flip\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\:\\:remap\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/IndexedCollection.php
+			path: src/CollectionLegacy/src/CollectionInterface.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\IndexedCollection\\:\\:keys\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\:\\:remove\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/IndexedCollection.php
+			path: src/CollectionLegacy/src/CollectionInterface.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\IndexedCollection\\:\\:newStatic\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\AbstractCollectionDecorator\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\:\\:replace\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/IndexedCollection.php
+			path: src/CollectionLegacy/src/CollectionInterface.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\IndexedCollection\\:\\:remap\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\:\\:reverse\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/IndexedCollection.php
+			path: src/CollectionLegacy/src/CollectionInterface.php
+
+		-
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\:\\:slice\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
+			count: 1
+			path: src/CollectionLegacy/src/CollectionInterface.php
+
+		-
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\:\\:sort\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
+			count: 1
+			path: src/CollectionLegacy/src/CollectionInterface.php
+
+		-
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\:\\:sortBy\\(\\) has parameter \\$direction with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/CollectionLegacy/src/CollectionInterface.php
+
+		-
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\:\\:sortBy\\(\\) has parameter \\$key with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/CollectionLegacy/src/CollectionInterface.php
+
+		-
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\:\\:sortBy\\(\\) has parameter \\$sortFlag with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/CollectionLegacy/src/CollectionInterface.php
+
+		-
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\:\\:sortBy\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
+			count: 1
+			path: src/CollectionLegacy/src/CollectionInterface.php
+
+		-
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\:\\:sortByKey\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
+			count: 1
+			path: src/CollectionLegacy/src/CollectionInterface.php
+
+		-
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\:\\:sortNatural\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
+			count: 1
+			path: src/CollectionLegacy/src/CollectionInterface.php
+
+		-
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\:\\:unique\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
+			count: 1
+			path: src/CollectionLegacy/src/CollectionInterface.php
+
+		-
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\:\\:values\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
+			count: 1
+			path: src/CollectionLegacy/src/CollectionInterface.php
+
+		-
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\IndexedCollection\\:\\:flip\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
+			count: 1
+			path: src/CollectionLegacy/src/IndexedCollection.php
+
+		-
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\IndexedCollection\\:\\:keys\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
+			count: 1
+			path: src/CollectionLegacy/src/IndexedCollection.php
+
+		-
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\IndexedCollection\\:\\:newStatic\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\AbstractCollectionDecorator\\.$#"
+			count: 1
+			path: src/CollectionLegacy/src/IndexedCollection.php
+
+		-
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\IndexedCollection\\:\\:remap\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
+			count: 1
+			path: src/CollectionLegacy/src/IndexedCollection.php
 
 		-
 			message: "#^Result of && is always false\\.$#"
 			count: 1
-			path: src/Collection/src/IndexedCollection.php
+			path: src/CollectionLegacy/src/IndexedCollection.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\TypedCollection\\:\\:flip\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\TypedCollection\\:\\:flip\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/TypedCollection.php
+			path: src/CollectionLegacy/src/TypedCollection.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\TypedCollection\\:\\:groupBy\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\TypedCollection\\:\\:groupBy\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/TypedCollection.php
+			path: src/CollectionLegacy/src/TypedCollection.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\TypedCollection\\:\\:keys\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\TypedCollection\\:\\:keys\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/TypedCollection.php
+			path: src/CollectionLegacy/src/TypedCollection.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\TypedCollection\\:\\:map\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\TypedCollection\\:\\:map\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/TypedCollection.php
+			path: src/CollectionLegacy/src/TypedCollection.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\TypedCollection\\:\\:newStatic\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\AbstractCollectionDecorator\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\TypedCollection\\:\\:newStatic\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\AbstractCollectionDecorator\\.$#"
 			count: 1
-			path: src/Collection/src/TypedCollection.php
+			path: src/CollectionLegacy/src/TypedCollection.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\TypedCollection\\:\\:remap\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\TypedCollection\\:\\:remap\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/TypedCollection.php
+			path: src/CollectionLegacy/src/TypedCollection.php
 
 		-
-			message: "#^Method spaceonfire\\\\Collection\\\\TypedCollection\\:\\:replace\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\Collection\\\\Legacy\\\\TypedCollection\\:\\:replace\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
-			path: src/Collection/src/TypedCollection.php
+			path: src/CollectionLegacy/src/TypedCollection.php
 
 		-
 			message: "#^Method spaceonfire\\\\CommandBus\\\\Bridge\\\\PsrLog\\\\LoggerMiddleware\\:\\:__construct\\(\\) has parameter \\$exceptionLogLevelMap with no value type specified in iterable type array\\.$#"
@@ -792,7 +802,7 @@ parameters:
 			path: src/DataSource/src/Bridge/CycleOrm/Query/CycleQuery.php
 
 		-
-			message: "#^Method spaceonfire\\\\DataSource\\\\Bridge\\\\CycleOrm\\\\Query\\\\CycleQuery\\:\\:fetchAll\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\DataSource\\\\Bridge\\\\CycleOrm\\\\Query\\\\CycleQuery\\:\\:fetchAll\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
 			path: src/DataSource/src/Bridge/CycleOrm/Query/CycleQuery.php
 
@@ -807,7 +817,7 @@ parameters:
 			path: src/DataSource/src/Bridge/CycleOrm/Query/CycleQuery.php
 
 		-
-			message: "#^Method spaceonfire\\\\DataSource\\\\Bridge\\\\CycleOrm\\\\Repository\\\\AbstractCycleRepositoryAdapter\\:\\:findAll\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\DataSource\\\\Bridge\\\\CycleOrm\\\\Repository\\\\AbstractCycleRepositoryAdapter\\:\\:findAll\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
 			path: src/DataSource/src/Bridge/CycleOrm/Repository/AbstractCycleRepositoryAdapter.php
 
@@ -867,12 +877,12 @@ parameters:
 			path: src/DataSource/src/MapperInterface.php
 
 		-
-			message: "#^Method spaceonfire\\\\DataSource\\\\QueryInterface\\:\\:fetchAll\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\DataSource\\\\QueryInterface\\:\\:fetchAll\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
 			path: src/DataSource/src/QueryInterface.php
 
 		-
-			message: "#^Method spaceonfire\\\\DataSource\\\\RepositoryInterface\\:\\:findAll\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\CollectionInterface\\.$#"
+			message: "#^Method spaceonfire\\\\DataSource\\\\RepositoryInterface\\:\\:findAll\\(\\) return type has no value type specified in iterable type spaceonfire\\\\Collection\\\\Legacy\\\\CollectionInterface\\.$#"
 			count: 1
 			path: src/DataSource/src/RepositoryInterface.php
 

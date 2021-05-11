@@ -23,7 +23,7 @@
     "monolog/monolog": "^2.1",
     "psr/container": "^1.0",
     "symfony/polyfill-php80": "^1.22",
-    "symfony/property-access": "^4.4|^5.0",
+    "symfony/property-access": "^5.1",
     "webmozart/assert": "^1.6",
     "webmozart/expression": "^1.0"
   },
@@ -52,7 +52,8 @@
     "symfony/var-exporter": "^5.1",
     "symplify/easy-coding-standard": "^9.2",
     "symplify/monorepo-builder": "^9.2",
-    "vlucas/phpdotenv": "^5.2"
+    "vlucas/phpdotenv": "^5.2",
+    "yiisoft/arrays": "^1.0"
   },
   "replace": {
     "spaceonfire/collection": "self.version",
@@ -77,6 +78,7 @@
   "autoload": {
     "psr-4": {
       "spaceonfire\\Collection\\": "src/Collection/src",
+      "spaceonfire\\Collection\\Legacy\\": "src/CollectionLegacy/src",
       "spaceonfire\\CommandBus\\": "src/CommandBus/src",
       "spaceonfire\\Common\\": "src/Common/src",
       "spaceonfire\\Container\\": "src/Container/src",
@@ -95,6 +97,7 @@
   "autoload-dev": {
     "psr-4": {
       "spaceonfire\\Collection\\": "src/Collection/tests",
+      "spaceonfire\\Collection\\Legacy\\": "src/CollectionLegacy/tests",
       "spaceonfire\\CommandBus\\": "src/CommandBus/tests",
       "spaceonfire\\Common\\": "src/Common/tests",
       "spaceonfire\\Container\\": "src/Container/tests",

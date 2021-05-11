@@ -8,7 +8,7 @@ use Cycle\ORM\Promise\Collection\CollectionPromise;
 use Cycle\ORM\Promise\PromiseMany;
 use Cycle\ORM\Promise\Reference;
 use Cycle\ORM\Relation\Pivoted\PivotedCollection as CyclePivotedCollection;
-use spaceonfire\Collection\Collection;
+use spaceonfire\Collection\Legacy\Collection;
 use spaceonfire\DataSource\Bridge\CycleOrm\AbstractCycleOrmTest;
 use spaceonfire\DataSource\Bridge\CycleOrm\Collection\PivotedCollection;
 use SplObjectStorage;

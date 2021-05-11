@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace spaceonfire\Container\Definition;
 
-use spaceonfire\Collection\AbstractCollectionDecorator;
-use spaceonfire\Collection\Collection;
-use spaceonfire\Collection\CollectionInterface;
-use spaceonfire\Collection\IndexedCollection;
-use spaceonfire\Collection\TypedCollection;
+use spaceonfire\Collection\Legacy\AbstractCollectionDecorator;
+use spaceonfire\Collection\Legacy\Collection;
+use spaceonfire\Collection\Legacy\CollectionInterface;
+use spaceonfire\Collection\Legacy\IndexedCollection;
+use spaceonfire\Collection\Legacy\TypedCollection;
 use spaceonfire\Container\ContainerInterface;
 use spaceonfire\Container\Exception\ContainerException;
 use spaceonfire\Type\InstanceOfType;

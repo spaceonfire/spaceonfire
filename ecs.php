@@ -23,16 +23,16 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         'Unused parameter $_.' => null,
 
         StrictComparisonFixer::class => [
-            __DIR__ . '/src/Collection/src/Collection.php',
+            __DIR__ . '/src/CollectionLegacy/src/Collection.php',
             __DIR__ . '/src/LaminasHydratorBridge/src/Strategy/BooleanStrategy.php',
         ],
         VoidReturnFixer::class => [
-            __DIR__ . '/src/Collection/src/Collection.php',
-            __DIR__ . '/src/Collection/src/TypedCollection.php',
-            __DIR__ . '/src/Collection/src/ArrayHelper.php',
+            __DIR__ . '/src/CollectionLegacy/src/Collection.php',
+            __DIR__ . '/src/CollectionLegacy/src/TypedCollection.php',
+            __DIR__ . '/src/CollectionLegacy/src/ArrayHelper.php',
         ],
         UnusedParameterSniff::class => [
-            __DIR__ . '/src/Collection/src/IndexedCollection.php',
+            __DIR__ . '/src/CollectionLegacy/src/IndexedCollection.php',
             __DIR__ . '/src/Criteria/src/AbstractCriteriaDecorator.php',
             __DIR__ . '/src/LaminasHydratorBridge/src/Strategy/*',
             __DIR__ . '/src/LaminasHydratorBridge/src/NamingStrategy/AliasNamingStrategy.php',
@@ -51,7 +51,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
             __DIR__ . '/src/Common/src/Kernel/ConsoleApplicationConfiguratorTrait.php',
         ],
         'SlevomatCodingStandard\Sniffs\Whitespaces\DuplicateSpacesSniff.DuplicateSpaces' => [
-            __DIR__ . '/src/Collection/src/ArrayHelper.php',
+            __DIR__ . '/src/CollectionLegacy/src/ArrayHelper.php',
         ],
     ]);
 

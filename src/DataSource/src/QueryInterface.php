@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace spaceonfire\DataSource;
 
 use Countable;
-use spaceonfire\Collection\CollectionInterface;
+use spaceonfire\Collection\Legacy\CollectionInterface;
 use spaceonfire\Criteria\CriteriaInterface;
 use spaceonfire\Criteria\FilterableInterface;
 use Spiral\Pagination\PaginableInterface;

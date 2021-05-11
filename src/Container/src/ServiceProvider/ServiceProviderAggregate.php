@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace spaceonfire\Container\ServiceProvider;
 
-use spaceonfire\Collection\AbstractCollectionDecorator;
-use spaceonfire\Collection\IndexedCollection;
-use spaceonfire\Collection\TypedCollection;
+use spaceonfire\Collection\Legacy\AbstractCollectionDecorator;
+use spaceonfire\Collection\Legacy\IndexedCollection;
+use spaceonfire\Collection\Legacy\TypedCollection;
 use spaceonfire\Container\ContainerAwareTrait;
 use spaceonfire\Container\Exception\ContainerException;
 use spaceonfire\Type\InstanceOfType;

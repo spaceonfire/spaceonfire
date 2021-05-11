@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace spaceonfire\Collection;
+namespace spaceonfire\Collection\Legacy;
 
 class AbstractCollectionDecoratorTest extends AbstractCollectionTest
 {

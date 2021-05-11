@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace spaceonfire\Container;
 
 use BadMethodCallException;
-use spaceonfire\Collection\Collection;
-use spaceonfire\Collection\CollectionInterface;
+use spaceonfire\Collection\Legacy\Collection;
+use spaceonfire\Collection\Legacy\CollectionInterface;
 use spaceonfire\Container\Argument\ArgumentResolver;
 use spaceonfire\Container\Definition\DefinitionInterface;
 use spaceonfire\Container\Reflection\ReflectionFactory;

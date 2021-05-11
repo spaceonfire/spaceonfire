@@ -6,8 +6,8 @@ namespace spaceonfire\DataSource\Bridge\CycleOrm\Query;
 
 use Cycle\ORM\Select;
 use RuntimeException;
-use spaceonfire\Collection\CollectionInterface;
-use spaceonfire\Collection\TypedCollection;
+use spaceonfire\Collection\Legacy\CollectionInterface;
+use spaceonfire\Collection\Legacy\TypedCollection;
 use spaceonfire\Criteria\Bridge\SpiralPagination\PaginableCriteria;
 use spaceonfire\Criteria\Criteria;
 use spaceonfire\Criteria\CriteriaInterface;

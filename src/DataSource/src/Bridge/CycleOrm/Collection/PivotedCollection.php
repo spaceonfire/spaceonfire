@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace spaceonfire\DataSource\Bridge\CycleOrm\Collection;
 
-use spaceonfire\Collection\AbstractCollectionDecorator;
+use spaceonfire\Collection\Legacy\AbstractCollectionDecorator;
 
 /**
  * Class PivotedCollection

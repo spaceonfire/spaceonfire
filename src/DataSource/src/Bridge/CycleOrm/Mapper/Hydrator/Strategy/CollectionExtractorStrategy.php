@@ -12,7 +12,7 @@ use Cycle\ORM\Relation\Pivoted\PivotedCollection;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection as DoctrineCollection;
 use Laminas\Hydrator\Strategy\StrategyInterface;
-use spaceonfire\Collection\CollectionInterface;
+use spaceonfire\Collection\Legacy\CollectionInterface;
 use spaceonfire\DataSource\Bridge\CycleOrm\Collection\PivotAwareInterface;
 use Webmozart\Assert\Assert;
 

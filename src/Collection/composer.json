@@ -18,12 +18,14 @@
   "require": {
     "php": "^7.4|^8.0",
     "ext-json": "*",
+    "spaceonfire/common": "^3.0",
     "spaceonfire/criteria": "^3.0",
     "spaceonfire/type": "^3.0",
     "webmozart/assert": "^1.6"
   },
   "require-dev": {
-    "roave/security-advisories": "dev-latest"
+    "roave/security-advisories": "dev-latest",
+    "yiisoft/arrays": "^1.0"
   },
   "autoload": {
     "psr-4": {

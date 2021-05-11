@@ -7,7 +7,7 @@ namespace spaceonfire\Container;
 use ArrayIterator;
 use Prophecy\Argument;
 use Psr\Container\ContainerInterface as PsrContainerInterface;
-use spaceonfire\Collection\Collection;
+use spaceonfire\Collection\Legacy\Collection;
 use spaceonfire\Container\Exception\ContainerException;
 use spaceonfire\Container\Exception\NotFoundException;
 use spaceonfire\Container\Fixtures\AbstractClass\AbstractClass;

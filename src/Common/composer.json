@@ -30,13 +30,16 @@
     "spaceonfire/command-bus": "^3.0",
     "spaceonfire/container": "^3.0",
     "symfony/console": "^5.1",
-    "symfony/stopwatch": "^5.1",
-    "vlucas/phpdotenv": "^5.2"
+    "symfony/property-access": "^5.1",
+    "vlucas/phpdotenv": "^5.2",
+    "yiisoft/arrays": "^1.0"
   },
   "suggest": {
     "vlucas/phpdotenv": "Required for env() function",
     "spaceonfire/command-bus": "Used to organize CQRS buses",
-    "spaceonfire/container": "Used to organize Kernel"
+    "spaceonfire/container": "Used to organize Kernel",
+    "symfony/property-access": "^5.1",
+    "yiisoft/arrays": "^1.0"
   },
   "autoload": {
     "psr-4": {

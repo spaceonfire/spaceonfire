@@ -20,7 +20,7 @@
   ],
   "require": {
     "php": "^7.4|^8.0",
-    "symfony/property-access": "^4.4|^5.0",
+    "symfony/property-access": "^5.1",
     "webmozart/assert": "^1.6",
     "webmozart/expression": "^1.0"
   },

@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace spaceonfire\DataSource\Fixtures\Infrastructure\Persistence\User;
 
-use spaceonfire\Collection\Collection;
-use spaceonfire\Collection\CollectionInterface;
+use spaceonfire\Collection\Legacy\Collection;
+use spaceonfire\Collection\Legacy\CollectionInterface;
 use spaceonfire\Criteria\CriteriaInterface;
 use spaceonfire\DataSource\Fixtures\Domain\User\Exceptions\UserNotFoundException;
 use spaceonfire\DataSource\Fixtures\Domain\User\User;

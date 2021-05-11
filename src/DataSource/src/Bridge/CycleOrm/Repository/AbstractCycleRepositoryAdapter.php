@@ -7,7 +7,7 @@ namespace spaceonfire\DataSource\Bridge\CycleOrm\Repository;
 use Cycle\ORM;
 use Cycle\ORM\ORMInterface;
 use Cycle\ORM\Transaction;
-use spaceonfire\Collection\CollectionInterface;
+use spaceonfire\Collection\Legacy\CollectionInterface;
 use spaceonfire\Criteria\CriteriaInterface;
 use spaceonfire\DataSource\Bridge\CycleOrm\Query\CycleQuery;
 use spaceonfire\DataSource\EntityInterface;

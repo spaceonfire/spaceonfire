@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace spaceonfire\Container;
 
 use Psr\Container\ContainerInterface as PsrContainerInterface;
-use spaceonfire\Collection\CollectionInterface;
+use spaceonfire\Collection\Legacy\CollectionInterface;
 use spaceonfire\Container\Definition\DefinitionInterface;
 
 interface ContainerInterface extends PsrContainerInterface
