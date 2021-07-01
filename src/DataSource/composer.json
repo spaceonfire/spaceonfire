@@ -23,25 +23,21 @@
   "require": {
     "php": "^7.4|^8.0",
     "ext-json": "*",
-    "guzzlehttp/psr7": "^1.6",
-    "jawira/case-converter": "^3.4",
     "spaceonfire/collection": "^3.0",
     "spaceonfire/criteria": "^3.0",
-    "spaceonfire/laminas-hydrator-bridge": "^3.0",
     "webmozart/assert": "^1.6"
   },
   "require-dev": {
     "cycle/orm": "^1.4",
     "cycle/schema-builder": "^1.2",
     "nette/utils": "^3.0",
-    "ramsey/uuid": "^3.9|^4.0",
     "roave/security-advisories": "dev-latest",
+    "spaceonfire/laminas-hydrator-bridge": "^3.0",
     "spaceonfire/value-object": "^3.0",
     "spiral/pagination": "^2.7"
   },
   "suggest": {
     "spaceonfire/value-object": "",
-    "ramsey/uuid": "",
     "spiral/pagination": "Needed for QueryInterface",
     "cycle/orm": "There are adapters available to use with Cycle ORM",
     "cycle/schema-builder": "There are adapters available to use with Cycle ORM",

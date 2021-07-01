@@ -26,17 +26,14 @@
     "php": "^7.4|^8.0",
     "ext-json": "*",
     "guzzlehttp/psr7": "^1.6",
-    "jawira/case-converter": "^3.4",
-    "spaceonfire/laminas-hydrator-bridge": "^3.0",
+    "symfony/string": "^5.1",
     "webmozart/assert": "^1.6"
   },
   "require-dev": {
-    "laminas/laminas-hydrator": "^3.0|^4.0",
-    "ramsey/uuid": "^3.9|^4.0"
+    "symfony/uid": "^5.1"
   },
   "suggest": {
-    "laminas/laminas-hydrator": "There is hydrator strategy integration for this package",
-    "ramsey/uuid": "To use UuidValue"
+    "symfony/uid": "To use UuidValue"
   },
   "autoload": {
     "psr-4": {

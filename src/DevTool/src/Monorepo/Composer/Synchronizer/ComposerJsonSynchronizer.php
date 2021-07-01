@@ -437,7 +437,7 @@ final class ComposerJsonSynchronizer
             JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_THROW_ON_ERROR
         );
 
-        $this->filesystem->rename($composerJson->getFilename(), $composerJson->getFilename() . '.bak', true);
+//        $this->filesystem->rename($composerJson->getFilename(), $composerJson->getFilename() . '.bak', true);
         $this->filesystem->dumpFile($composerJson->getFilename(), $content . PHP_EOL);
     }
 }

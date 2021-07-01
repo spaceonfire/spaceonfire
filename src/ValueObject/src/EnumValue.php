@@ -5,10 +5,10 @@ declare(strict_types=1);
 namespace spaceonfire\ValueObject;
 
 use InvalidArgumentException;
-use Jawira\CaseConverter\Convert;
 use ReflectionClass;
 use ReflectionException;
 use spaceonfire\ValueObject\Helpers\StringHelper;
+use function Symfony\Component\String\s;
 
 abstract class EnumValue extends BaseValueObject
 {
@@ -48,7 +48,7 @@ abstract class EnumValue extends BaseValueObject
 
     /**
      * Returns values array for this enum class.
-     * @return mixed[]
+     * @return array<string,mixed>
      */
     public static function values(): array
     {
@@ -101,7 +101,6 @@ abstract class EnumValue extends BaseValueObject
 
     private static function keysFormatter(string $key): string
     {
-        /** @noinspection PhpUnhandledExceptionInspection */
-        return (new Convert(strtolower($key)))->toCamel();
+        return s($key)->lower()->replace('_', ' ')->title(true)->camel()->toString();
     }
 }

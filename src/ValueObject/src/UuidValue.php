@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace spaceonfire\ValueObject;
 
 use InvalidArgumentException;
-use Ramsey\Uuid\Uuid;
+use Symfony\Component\Uid\Uuid;
 
 class UuidValue extends StringValue
 {
@@ -15,7 +15,7 @@ class UuidValue extends StringValue
      */
     public static function random(): self
     {
-        return new static(Uuid::uuid4()->toString());
+        return new static(Uuid::v4());
     }
 
     /**
